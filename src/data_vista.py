@@ -14,7 +14,7 @@ APP_VERSION = "1.0.0"
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
-class MyDataScientist:
+class DataVista:
     def __init__(self):
         self.data = None
 
@@ -43,14 +43,14 @@ class MyDataScientist:
         visualizer.visualize(column, chart_type)
 
 def main():
-    print(Fore.GREEN + f"\nWelcome to My Data Scientist v{APP_VERSION}!" + Fore.RESET)
+    print(Fore.GREEN + f"\nWelcome to DataVista v{APP_VERSION}!" + Fore.RESET)
     print(Fore.GREEN + "Your companion for data analysis and visualization.\n" + Fore.RESET)
 
-    parser = argparse.ArgumentParser(description="My Data Scientist App")
+    parser = argparse.ArgumentParser(description="DataVista App")
     parser.add_argument('--data', type=str, help='Path to the CSV file', default='data/walmart_grocery_data.csv')
     args = parser.parse_args()
 
-    app = MyDataScientist()
+    app = DataVista()
     
     app.load_data(args.data)
     app.clean_data()
@@ -84,7 +84,7 @@ def main():
             app.visualize_data(feature_column, chart_choice)
         elif choice == '4':
             if input(Fore.YELLOW + "\nAre you sure you want to exit? (y/n): " + Fore.RESET).lower() == 'y':
-                logging.info(Fore.GREEN + "Thanks for using My Data Scientist. Goodbye!" + Fore.GREEN)
+                logging.info(Fore.GREEN + "Thanks for using DataVista. Goodbye!" + Fore.GREEN)
                 break
         else:
             logging.error(Fore.RED + "Invalid choice. Please enter a number between 1 and 4." + Fore.RED)
