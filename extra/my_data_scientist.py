@@ -21,9 +21,9 @@ RESET = "\033[0m"
 # Define the app version
 APP_VERSION = "1.0.0"
 
-class MyDataScientist:
+class DataVista:
     def __init__(self):
-        """Initialize the MyDataScientist class."""
+        """Initialize the DataVista class."""
         self.data = None  # Placeholder for loaded data
 
     # Loading the Data
@@ -225,15 +225,15 @@ class MyDataScientist:
 
 # Main Function
 def main():
-    """Main function to run the My Data Scientist application."""
-    print(GREEN + f"\nWelcome to My Data Scientist v{APP_VERSION}!" + RESET)
+    """Main function to run the DataVista application."""
+    print(GREEN + f"\nWelcome to DataVista v{APP_VERSION}!" + RESET)
     print(GREEN + "Your companion for data analysis and visualization.\n" + RESET)
 
-    parser = argparse.ArgumentParser(description="My Data Scientist App")
+    parser = argparse.ArgumentParser(description="DataVista App")
     parser.add_argument('--data', type=str, help='Path to the CSV file', default='data/walmart_grocery_data.csv')
     args = parser.parse_args()
 
-    app = MyDataScientist()
+    app = DataVista()
     
     # Load data
     app.load_data(args.data)
@@ -273,7 +273,7 @@ def main():
             app.visualize_data(feature_column, chart_choice)
         elif choice == '4':
             if input(YELLOW + "\nAre you sure you want to exit? (y/n): " + RESET).lower() == 'y':
-                logging.info(GREEN + "Thanks for using My Data Scientist. Goodbye!" + RESET)
+                logging.info(GREEN + "Thanks for using DataVista. Goodbye!" + RESET)
                 break
         else:
             logging.error("Invalid choice. Please enter a number between 1 and 4.")
