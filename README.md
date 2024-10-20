@@ -1,11 +1,10 @@
-# My Data Scientist
+# DataVista
 
-![My Data Scientist](https://tinypic.host/images/2024/10/20/MyDataScientist.png)
-
+![DataVista](https://tinypic.host/images/2024/10/20/DataVista.png)
 
 ## Overview
 
-"My Data Scientist" is a Python application designed to assist data analysts and scientists in making informed decisions using existing data. The app integrates functionalities for data loading, cleaning, preprocessing, statistical analysis, machine learning, and visualization, making it a comprehensive tool for data analysis.
+"DataVista" is a Python application designed to assist data analysts and scientists in making informed decisions using existing data. The app integrates functionalities for data loading, cleaning, preprocessing, statistical analysis, machine learning, and visualization, making it a comprehensive tool for data analysis.
 
 ## Features
 
@@ -25,7 +24,6 @@
 - **Data Splitting**:
 
   - Split the dataset into training and testing sets based on a specified target column.
-
 
 ### Data Wrangling
 
@@ -92,15 +90,13 @@
 - Python 3.x
 - Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`
 
-
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Willie-Conway/MyDataScientist.git
-   cd MyDataScientist
+   git clone https://github.com/Willie-Conway/DataVista.git
+   cd DataVista
    ```
-
 
 ## Requirements
 
@@ -116,18 +112,17 @@ pip install -r requirements.txt
 2. Run the app:
 
 ```bash
-python src/my_data_scientist.py
+python src/data_vista.py
 ```
 
 3. Follow the prompts to load data, preprocess, split, and  visualize.
-
 
 ### Running the App with a Specific File
 
 To run the app with a specific CSV file, you can specify the file path in the command line when you execute the script. For example:
 
 ```
-python src/my_data_scientist.py --data data/your_specific_file.csv
+python src/data_vista.py --data data/your_specific_file.csv
 
 ```
 
@@ -142,18 +137,18 @@ python -m unittest discover -s tests
 
 ## Sample Unit Tests
 
-You can create a `tests/test_my_data_scientist.py` file with the following content:
+You can create a `tests/data_vista.py` file with the following content:
 
 ```
-# test_my_data_scientist.py
+# test_data_vista.py
 import os
 import unittest
 import pandas as pd
-from src.my_data_scientist import MyDataScientist
+from src.data_vista import DataVista
 
-class TestMyDataScientist(unittest.TestCase):
+class TestDataVista(unittest.TestCase):
     def setUp(self):
-        self.app = MyDataScientist()
+        self.app = DataVista()
         self.app.load_data('data/test_data_with_duplicates.csv')  # Ensure you have the sample data available
 
     def test_load_data(self):
@@ -188,19 +183,17 @@ class TestMyDataScientist(unittest.TestCase):
         self.app.clean_data()
         self.app.preprocess_data()
         self.app.machine_learning(target_column, algorithm='linear_regression')
-        
+  
         # Test saving the model
         self.app.machine_learning.save_model('test_model.pkl')  # Ensure the save_model method is implemented
         self.assertTrue(os.path.exists('test_model.pkl'))
-        
+  
         # Test loading the model
         loaded_model = self.app.machine_learning.load_model('test_model.pkl')  # Ensure the load_model method is implemented
         self.assertIsNotNone(loaded_model)
 
 if __name__ == '__main__':
     unittest.main()
-
-
 
 ```
 
@@ -220,11 +213,10 @@ The app includes a sample  dataset located as `data/sample_data.csv` for testing
    2. **Run the App**: Execute the app by running:
 
 ```bash
-python src/my_data_scientist.py
+python src/data_vista.py
 ```
 
-  3. **Follow Prompts**: Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
-
+    3.**Follow Prompts** : Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
 
 ## License
 
@@ -243,8 +235,8 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 
 ### Conclusion
 
-"My Data Scientist" is a comprehensive tool designed to empower data analysts and scientists in their quest to derive meaningful insights from data. By integrating essential features such as data loading, cleaning, statistical analysis, machine learning, and diverse visualization options, the app simplifies the complexities of data analysis.
+"DataVista" is a comprehensive tool designed to empower data analysts and scientists in their quest to derive meaningful insights from data. By integrating essential features such as data loading, cleaning, statistical analysis, machine learning, and diverse visualization options, the app simplifies the complexities of data analysis.
 
-With a user-friendly interface and robust functionality, it enables users to make informed decisions quickly and effectively. As data continues to play a crucial role in shaping business strategies and outcomes, "My Data Scientist" equips professionals with the tools they need to navigate the data landscape confidently.
+With a user-friendly interface and robust functionality, it enables users to make informed decisions quickly and effectively. As data continues to play a crucial role in shaping business strategies and outcomes, "DataVista" equips professionals with the tools they need to navigate the data landscape confidently.
 
-Whether you're a seasoned data scientist or just starting your journey, this app serves as a valuable companion, transforming your data challenges into actionable insights. Embrace the power of data with "My Data Scientist" and unlock the potential of your data today!
+Whether you're a seasoned data scientist or just starting your journey, this app serves as a valuable companion, transforming your data challenges into actionable insights. Embrace the power of data with "DataVista" and unlock the potential of your data today!
