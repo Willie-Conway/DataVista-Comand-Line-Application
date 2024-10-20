@@ -1,8 +1,8 @@
-# User Guide for My Data Scientist
+# User Guide for DataVista
 
 ## Introduction
 
-"My Data Scientist" is a command-line application designed to simplify data analysis for data scientists and analysts. This guide provides detailed instructions on how to install, use, and navigate the app.
+"DataVista" is a command-line application designed to simplify data analysis for data scientists and analysts. This guide provides detailed instructions on how to install, use, and navigate the app.
 
 ## Table of Contents
 
@@ -17,13 +17,13 @@
 
 ## Installation
 
-To use "My Data Scientist," you need Python 3.x installed on your machine. Follow these steps to set up the application:
+To use "DataVista," you need Python 3.x installed on your machine. Follow these steps to set up the application:
 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/my-data-scientist.git
-   cd my-data-scientist
+   git clone https://github.com/yourusername/DataVista.git
+   cd DataVista
 
    ```
 2. Create a virtual environment (optional but recommended):
@@ -45,7 +45,7 @@ To use "My Data Scientist," you need Python 3.x installed on your machine. Follo
 Run the application using the following command:
 
 ```
-python my_data_scientist.py --data path/to/your/data.csv
+python src/data_vista.py --data path/to/your/data.csv
 
 ```
 
@@ -90,4 +90,4 @@ The app is designed to provide user-friendly error messages. If you encounter is
 
 ## Feedback and Support
 
-We value your feedback! If you have suggestions, encounter bugs, or need support, please open an issue on our [GitHub repository](https://github.com/yourusername/my-data-scientist/issues).
+We value your feedback! If you have suggestions, encounter bugs, or need support, please open an issue on our [GitHub repository](https://github.com/Willie-Conway/DataVista/issues).
