@@ -97,8 +97,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Willie-Conway/My-Data-Scientist.git
-   cd "My Data Scientist"
+   git clone https://github.com/Willie-Conway/MyDataScientist.git
+   cd MyDataScientist
    ```
 
 
