@@ -1,3 +1,5 @@
+# test_data_vista.py
+import os
 import unittest
 import pandas as pd
 from src.data_vista import DataVista
@@ -25,13 +27,28 @@ class TestDataVista(unittest.TestCase):
         target_column = 'Weekly_Sales'
         self.app.clean_data()
         self.app.preprocess_data()
-        self.app.machine_learning(target_column)
+        result = self.app.machine_learning(target_column, algorithm='linear_regression')  # Update to include algorithm
+        self.assertIsNotNone(result)
 
     def test_visualization(self):
         # Assuming you have a column 'Store' to visualize
         column_to_visualize = 'Store'
         chart_type = '1'  # Histogram
         self.app.visualize_data(column_to_visualize, chart_type)
+
+    def test_save_load_model(self):
+        target_column = 'Weekly_Sales'
+        self.app.clean_data()
+        self.app.preprocess_data()
+        self.app.machine_learning(target_column, algorithm='linear_regression')
+        
+        # Test saving the model
+        self.app.machine_learning.save_model('test_model.pkl')  # Ensure the save_model method is implemented
+        self.assertTrue(os.path.exists('test_model.pkl'))
+        
+        # Test loading the model
+        loaded_model = self.app.machine_learning.load_model('test_model.pkl')  # Ensure the load_model method is implemented
+        self.assertIsNotNone(loaded_model)
 
 if __name__ == '__main__':
     unittest.main()
