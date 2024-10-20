@@ -1,6 +1,6 @@
 # My Data Scientist
 
-![My Data Scientist](https://tinypic.host/images/2024/10/20/My-Data-Scientist-1.png)
+![My Data Scientist](https://tinypic.host/images/2024/10/20/MyDataScientist.png)
 
 
 ## Overview
