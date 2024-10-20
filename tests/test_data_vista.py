@@ -1,10 +1,10 @@
 import unittest
 import pandas as pd
-from src.my_data_scientist import MyDataScientist
+from src.data_vista import DataVista
 
-class TestMyDataScientist(unittest.TestCase):
+class TestDataVista(unittest.TestCase):
     def setUp(self):
-        self.app = MyDataScientist()
+        self.app = DataVista()
         self.app.load_data('data/test_data_with_duplicates.csv')  # Ensure you have the sample data available
 
     def test_load_data(self):
