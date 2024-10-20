@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from my_data_scientist import MyDataScientist
+from src.my_data_scientist import MyDataScientist
 
 class TestMyDataScientist(unittest.TestCase):
     def setUp(self):
