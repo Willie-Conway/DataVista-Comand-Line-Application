@@ -210,13 +210,13 @@ The app includes a sample  dataset located as `data/sample_data.csv` for testing
    pip install -r requirements.txt
    ```
 
-   2. **Run the App**: Execute the app by running:
+2. **Run the App**: Execute the app by running:
 
 ```bash
 python src/data_vista.py
 ```
 
-    3.**Follow Prompts** : Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
+3.**Follow Prompts** : Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
 
 ## License
 
