@@ -1,5 +1,5 @@
 
-# Contributing to My Data Scientist
+# Contributing to DataVista
 
 Thank you for considering contributing to this project!
 
