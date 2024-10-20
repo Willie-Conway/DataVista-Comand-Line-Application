@@ -1,6 +1,7 @@
 # My Data Scientist
 
-![My Data Scientist](image/My Data Scientist.png)
+![My Data Scientist](https://www.imghippo.com/i/q6A7n1729395715.png)
+
 
 ## Overview
 
