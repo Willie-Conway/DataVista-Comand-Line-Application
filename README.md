@@ -216,7 +216,7 @@ The app includes a sample  dataset located as `data/sample_data.csv` for testing
 python src/data_vista.py
 ```
 
-3.**Follow Prompts** : Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
+3. **Follow Prompts** : Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
 
 ## License
 
