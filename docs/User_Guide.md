@@ -45,7 +45,7 @@ To use "My Data Scientist," you need Python 3.x installed on your machine. Follo
 Run the application using the following command:
 
 ```
-python app.py --data path/to/your/data.csv
+python my_data_scientist.py --data path/to/your/data.csv
 
 ```
 
