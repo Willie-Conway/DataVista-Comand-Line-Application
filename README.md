@@ -97,8 +97,8 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Willie-Conway/MyDataScientist.git
-   cd MyDataScientist
+   git clone https://github.com/Willie-Conway/My-Data-Scientist.git
+   cd "My Data Scientist"
    ```
 
 
@@ -146,23 +146,43 @@ You can create a `tests/test_my_data_scientist.py` file with the following conte
 
 ```
 import unittest
+import pandas as pd
 from my_data_scientist import MyDataScientist
 
 class TestMyDataScientist(unittest.TestCase):
     def setUp(self):
         self.app = MyDataScientist()
-        self.app.load_data('data/sample_data.csv')  # Ensure you have the sample data available
+        self.app.load_data('data/test_data_with_duplicates.csv')  # Ensure you have the sample data available
+
+    def test_load_data(self):
+        self.assertIsNotNone(self.app.data)
+        self.assertTrue(isinstance(self.app.data, pd.DataFrame))
 
     def test_preprocess_data(self):
         self.app.preprocess_data()
         self.assertFalse(self.app.data.isnull().values.any())
 
-    def test_split_data(self):
-        X_train, X_test, y_train, y_test = self.app.split_data('target')
-        self.assertEqual(len(X_train), 4)  # Adjust based on your sample data
+    def test_clean_data(self):
+        original_shape = self.app.data.shape
+        self.app.clean_data()
+        self.assertLess(self.app.data.shape[0], original_shape[0])  # Expecting some rows to be removed
+
+    def test_train_model(self):
+        # Assuming 'Weekly_Sales' is the target column in your sample data
+        target_column = 'Weekly_Sales'
+        self.app.clean_data()
+        self.app.preprocess_data()
+        self.app.machine_learning(target_column)
+
+    def test_visualization(self):
+        # Assuming you have a column 'Store' to visualize
+        column_to_visualize = 'Store'
+        chart_type = '1'  # Histogram
+        self.app.visualize_data(column_to_visualize, chart_type)
 
 if __name__ == '__main__':
     unittest.main()
+
 
 ```
 
@@ -185,7 +205,7 @@ The app includes a sample  dataset located as `data/sample_data.csv` for testing
 python my_data_scientist.py
 ```
 
-    3.**Follow Prompts** : Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
+  3. **Follow Prompts**: Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
 
 
 ## License
