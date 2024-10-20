@@ -90,7 +90,7 @@
 ### Prerequisites
 
 - Python 3.x
-- Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`
+- Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`
 
 
 ## Installation
@@ -116,7 +116,7 @@ pip install -r requirements.txt
 2. Run the app:
 
 ```bash
-python my_data_scientist.py
+python src/my_data_scientist.py
 ```
 
 3. Follow the prompts to load data, preprocess, split, and  visualize.
@@ -127,7 +127,7 @@ python my_data_scientist.py
 To run the app with a specific CSV file, you can specify the file path in the command line when you execute the script. For example:
 
 ```
-python my_data_scientist.py --data data/your_specific_file.csv
+python src/my_data_scientist.py --data data/your_specific_file.csv
 
 ```
 
@@ -220,7 +220,7 @@ The app includes a sample  dataset located as `data/sample_data.csv` for testing
    2. **Run the App**: Execute the app by running:
 
 ```bash
-python my_data_scientist.py
+python src/my_data_scientist.py
 ```
 
   3. **Follow Prompts**: Follow the on-screen prompts to load your dataset, preprocess it, and visualize the data.
