@@ -3,18 +3,18 @@
 VERSION="1.0.0"
 
 echo "============================"
-echo "       My Data Scientist    "
+echo "       DataVista    "
 echo "           Version: $VERSION"
 echo "============================"
 echo ""
 
 # Provide a direct link to the image
 echo "Open the following link to view the image:"
-echo "https://tinypic.host/images/2024/10/20/MyDataScientist.png"
+echo "https://tinypic.host/images/2024/10/20/DataVista.png"
 echo ""
 
 echo "Overview:"
-echo "\"My Data Scientist\" is a Python application designed to assist data analysts and scientists in making informed decisions."
+echo "\"DataVista\" is a Python application designed to assist data analysts and scientists in making informed decisions."
 echo ""
 
 echo "Features:"
