@@ -1,6 +1,6 @@
 # My Data Scientist
 
-![My Data Scientist](https://tinypic.host/images/2024/10/20/My-Data-Scientist.png)
+![My Data Scientist](https://imgur.com/v22RadV)
 
 
 ## Overview
