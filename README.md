@@ -1,7 +1,6 @@
 # My Data Scientist
 
-![Sample Visualization](https://i.postimg.cc/15bZsFVM/My-Data-Scientist.png)
-
+[![My-Data-Scientist.png](https://i.postimg.cc/vBCjTPVB/My-Data-Scientist.png)](https://postimg.cc/XGcxDkxS)
 
 ## Overview
 
