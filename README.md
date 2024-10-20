@@ -1,6 +1,6 @@
 # My Data Scientist
 
-![My Data Scientist](My-Data-Scientist/image/My Data Scientist.png)
+![My Data Scientist](https://imgur.com/a/kvPebGy)
 
 
 ## Overview
