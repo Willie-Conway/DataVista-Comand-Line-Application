@@ -10,7 +10,7 @@ echo ""
 
 # Provide a direct link to the image
 echo "Open the following link to view the image:"
-echo "https://i.postimg.cc/15bZsFVM/My-Data-Scientist.png"
+echo "https://tinypic.host/images/2024/10/20/MyDataScientist.png"
 echo ""
 
 echo "Overview:"
