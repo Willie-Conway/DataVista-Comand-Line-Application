@@ -1,6 +1,7 @@
 # My Data Scientist
 
-![Alt text](image/My Data Scientist.png)
+![My Data Scientist](image/My Data Scientist.png)
+
 ## Overview
 
 "My Data Scientist" is a Python application designed to assist data analysts and scientists in making informed decisions using existing data. The app integrates functionalities for data loading, cleaning, preprocessing, statistical analysis, machine learning, and visualization, making it a comprehensive tool for data analysis.
