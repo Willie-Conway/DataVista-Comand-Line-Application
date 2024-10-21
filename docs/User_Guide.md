@@ -1,4 +1,5 @@
 # User Guide for DataVista
+![DataVista User Guide](https://tinypic.host/images/2024/10/21/DataVistaUserGuide.png)
 
 ## Introduction
 
