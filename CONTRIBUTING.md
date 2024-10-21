@@ -1,5 +1,6 @@
 
 # Contributing to DataVista
+![DataVista Contributions](https://tinypic.host/images/2024/10/21/DataVistaContributions.png)
 
 Thank you for considering contributing to this project!
 
