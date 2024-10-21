@@ -103,6 +103,37 @@ Enter the corresponding number for your choice, and the app will generate the se
 
 The app is designed to provide user-friendly error messages. If you encounter issues such as missing files or invalid column names, follow the guidance in the error messages to resolve them.
 
+## Data Flow Overview
+
+1. **Loading Data** :
+
+* User provides a CSV file path.
+* `load_data()` reads the file and populates `self.data`.
+
+1. **Cleaning Data** :
+
+* `clean_data()` processes `self.data` to remove duplicates and handle missing values.
+
+1. **Preprocessing Data** :
+
+* `preprocess_data()` formats the data for analysis (e.g., date conversion).
+
+1. **Statistical Analysis** :
+
+* User selects a column for analysis.
+* `statistical_analysis()` computes and logs various statistics.
+
+1. **Machine Learning** :
+
+* User specifies a target column.
+* `machine_learning()` trains a model and logs the performance.
+
+1. **Data Visualization** :
+
+* User selects a visualization type and column.
+* `visualize_data()` generates and displays the chart.
+
+
 ## Feedback and Support
 
 We value your feedback! If you have suggestions, encounter bugs, or need support, please open an issue on our [GitHub repository](https://github.com/Willie-Conway/DataVista/issues).
