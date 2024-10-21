@@ -8,79 +8,62 @@
 
 ## Features
 
+## Features
+
 ### Core Features
 
 - **Data Loading**:
-
   - Load data from a CSV file into a pandas DataFrame.
-- **Data Cleaning**:
 
+- **Data Cleaning**:
   - Remove duplicate rows.
   - Handle missing values by either removing them or filling them with specified values or the mean.
-- **Data Preprocessing**:
 
+- **Data Preprocessing**:
   - Convert date columns to datetime format.
   - Forward-fill missing values in the dataset.
-- **Data Splitting**:
 
+- **Data Splitting**:
   - Split the dataset into training and testing sets based on a specified target column.
 
 ### Data Wrangling
-
 - Perform data cleaning to ensure data integrity and quality.
 
 ### Statistical Analysis
-
-- Provide a statistical summary of numerical columns, including mean, median, mode, range, sample size, standard deviation, and confidence intervals.
+- Provide a statistical summary of numerical columns, including:
+  - Mean
+  - Median
+  - Mode
+  - Range
+  - Sample size
+  - Standard deviation
+  - Confidence intervals
 - Conduct normality tests on specified columns.
 
 ### Machine Learning
-
 - Train a simple linear regression model using numeric columns as features and a user-defined target column.
 - Evaluate the model's performance using R² score.
 
 ### Visualization Options
-
-1. **Distribution Plot**:
-
-   - Visualize the distribution of a specified numeric column.
-2. **Bar Chart**:
-
-   - Create a bar chart for categorical data.
-3. **Box Plot**:
-
-   - Visualize the distribution of a numerical column grouped by a categorical column.
-4. **Scatter Plot**:
-
-   - Create a scatter plot to visualize the relationship between two numeric columns.
-5. **Scatter Plot with Linear Regression**:
-
-   - Generate a scatter plot that includes a linear regression line.
-6. **Histogram**:
-
-   - Display a histogram for the distribution of a specified numeric column.
-7. **Pie Chart**:
-
-   - Create a pie chart for a specified categorical column.
+- **Distribution Plot**: Visualize the distribution of a specified numeric column.
+- **Bar Chart**: Create a bar chart for categorical data.
+- **Box Plot**: Visualize the distribution of a numerical column grouped by a categorical column.
+- **Scatter Plot**: Create a scatter plot to visualize the relationship between two numeric columns.
+- **Scatter Plot with Linear Regression**: Generate a scatter plot that includes a linear regression line.
+- **Histogram**: Display a histogram for the distribution of a specified numeric column.
+- **Pie Chart**: Create a pie chart for a specified categorical column.
 
 ### User Interaction
-
-- **Command-Line Interface**:
-
-  - Allow users to input choices for visualization types and target columns interactively.
-- **Logging**:
-
-  - Provide logging for successful operations, warnings, and errors for better debugging and user awareness.
+- **Command-Line Interface**: Allow users to input choices for visualization types and target columns interactively.
+- **Logging**: Provide logging for successful operations, warnings, and errors for better debugging and user awareness.
 
 ### Error Handling
-
 - Handle various errors, such as:
   - File not found.
   - Empty datasets.
   - Invalid column names for visualizations.
 
 ### Default Settings
-
 - Load a default dataset if no file path is provided.
 
 ## Getting Started
