@@ -10,15 +10,89 @@
 ```python
 DataVista/
 │
-├── data_vista.py             # Main application file
-├── data_loader.py            # Module for data loading
-├── data_cleaner.py           # Module for data cleaning
-├── data_preprocessor.py      # Module for preprocessing
-├── statistical_analysis.py   # Module for statistical analysis
-├── machine_learning.py       # Module for machine learning
-└── visualization.py          # Module for data visualization
+├── .github/
+│   └── workflows/
+│       └── ci.yml                     # Continuous integration configuration file
+│
+├── data/
+│   ├── market_research.csv             # Dataset for market research analysis
+│   ├── sample_data.csv                 # Sample dataset for testing
+│   ├── test_data_with_duplicates.csv    # Dataset specifically for testing data cleaning
+│   └── walmart_grocery_data.csv        # Grocery data for analysis
+│
+├── docs/
+│   └── User_Guide.md                   # User guide documentation
+│
+├── extra/
+│   └── image/
+│       ├── DataVistaLogo.png           # Logo images for the application
+│       ├── DataVistaLogo2.png
+│       └── DataVistaLogo3.png
+│
+├── src/
+│   ├── data_cleaner.py                 # Module for data cleaning
+│   ├── data_loader.py                   # Module for loading data
+│   ├── data_preprocessor.py             # Module for preprocessing data
+│   ├── data_vista.py                    # Main application file
+│   ├── machine_learning.py              # Module for machine learning tasks
+│   ├── statistical_analysis.py           # Module for statistical analysis
+│   └── visualization.py                  # Module for data visualization
+│
+├── tests/
+│   └── test_data_vista.py               # Unit tests for the DataVista application
+│
+├── CODE_OF_CONDUCT.md                   # Guidelines for community behavior
+├── CONTRIBUTING.md                       # Instructions for contributing to the project
+├── LICENSE                               # License information for the project
+├── README.md                             # Overview of the project
+├── Summary.md                            # Summary of the project or key features
+├── data_vista_info.sh                   # Script for additional info or setup
+└── requirements.txt                     # List of required Python packages
+
 
 ```
+
+# DataVista File Descriptions
+
+## .github/workflows/ci.yml
+Contains configuration for continuous integration, automating tests or builds when code changes are pushed.
+
+## data/
+Holds various datasets, including test data, which are essential for both application testing and user analysis.
+
+## docs/User_Guide.md
+Contains user instructions and guides for using DataVista effectively.
+
+## extra/image/
+Includes logo images for branding or visual identity.
+
+## src/
+Contains all the source code files that make up the application.
+
+## tests/
+Contains tests to ensure the application behaves as expected, promoting code reliability.
+
+## CODE_OF_CONDUCT.md
+Sets expectations for community behavior and interaction.
+
+## CONTRIBUTING.md
+Provides guidelines for contributing to the project, encouraging collaboration.
+
+## LICENSE
+Details the legal permissions and restrictions for using and distributing the software.
+
+## README.md
+A crucial file that introduces the project, explaining its purpose, features, and how to get started.
+
+## Summary.md
+Summarizes the project, possibly highlighting key features or changes.
+
+## data_vista_info.sh
+A shell script, possibly for setting up or providing additional information about the project.
+
+## requirements.txt
+Lists the dependencies required to run the application, facilitating easy setup.
+
 
 ## Table of Contents
 
