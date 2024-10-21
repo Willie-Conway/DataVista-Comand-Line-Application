@@ -137,7 +137,7 @@ python -m unittest discover -s tests
 
 ## Sample Unit Tests
 
-You can create a `tests/data_vista.py` file with the following content:
+You can create a `tests/test_data_vista.py` file with the following content:
 
 ```
 # test_data_vista.py
