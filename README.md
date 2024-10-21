@@ -8,8 +8,6 @@
 
 ## Features
 
-## Features
-
 ### Core Features
 
 - **Data Loading**:
