@@ -3,7 +3,7 @@
 
 ![DataVista](https://tinypic.host/images/2024/10/21/DataVistaLogo2.png)
 
-DataVista is a Python application designed to streamline the data analysis workflow for analysts and scientists. It offers a comprehensive suite of features, making it a valuable tool for anyone working with data.
+**DataVista** is a Python application designed to streamline the data analysis workflow for analysts and scientists. It offers a comprehensive suite of features, making it a valuable tool for anyone working with data.
 
 ## Key Features
 
