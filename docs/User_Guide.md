@@ -4,6 +4,21 @@
 
 **DataVista** is a command-line application designed to simplify data analysis for data scientists and analysts. This guide provides detailed instructions on how to install, use, and navigate the app.
 
+## Project Structure
+
+```python
+DataVista/
+│
+├── data_vista.py                  # Main application file
+├── data_loader.py           # Module for data loading
+├── data_cleaner.py          # Module for data cleaning
+├── data_preprocessor.py      # Module for preprocessing
+├── statistical_analysis.py   # Module for statistical analysis
+├── machine_learning.py       # Module for machine learning
+└── visualization.py          # Module for data visualization
+
+```
+
 ## Table of Contents
 
 1. [Installation]()
