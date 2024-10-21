@@ -22,7 +22,7 @@ To use "DataVista," you need Python 3.x installed on your machine. Follow these 
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yourusername/DataVista.git
+   git clone https://github.com/Willie-Conway/DataVista.git
    cd DataVista
 
    ```
