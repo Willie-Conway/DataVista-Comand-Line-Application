@@ -52,45 +52,45 @@ DataVista/
 
 ```
 
-# DataVista File Descriptions
+## DataVista File Descriptions
 
-## .github/workflows/ci.yml
+### .github/workflows/ci.yml
 Contains configuration for continuous integration, automating tests or builds when code changes are pushed.
 
-## data/
+### data/
 Holds various datasets, including test data, which are essential for both application testing and user analysis.
 
-## docs/User_Guide.md
+### docs/User_Guide.md
 Contains user instructions and guides for using DataVista effectively.
 
-## extra/image/
+### extra/image/
 Includes logo images for branding or visual identity.
 
-## src/
+### src/
 Contains all the source code files that make up the application.
 
-## tests/
+### tests/
 Contains tests to ensure the application behaves as expected, promoting code reliability.
 
-## CODE_OF_CONDUCT.md
+### CODE_OF_CONDUCT.md
 Sets expectations for community behavior and interaction.
 
-## CONTRIBUTING.md
+### CONTRIBUTING.md
 Provides guidelines for contributing to the project, encouraging collaboration.
 
-## LICENSE
+### LICENSE
 Details the legal permissions and restrictions for using and distributing the software.
 
-## README.md
+### README.md
 A crucial file that introduces the project, explaining its purpose, features, and how to get started.
 
-## Summary.md
+### Summary.md
 Summarizes the project, possibly highlighting key features or changes.
 
-## data_vista_info.sh
+### data_vista_info.sh
 A shell script, possibly for setting up or providing additional information about the project.
 
-## requirements.txt
+### requirements.txt
 Lists the dependencies required to run the application, facilitating easy setup.
 
 
