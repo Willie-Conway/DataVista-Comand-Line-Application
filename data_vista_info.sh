@@ -3,7 +3,7 @@
 VERSION="1.0.0"
 
 echo "============================"
-echo "       DataVista    "
+echo "           DataVista    "
 echo "           Version: $VERSION"
 echo "============================"
 echo ""
