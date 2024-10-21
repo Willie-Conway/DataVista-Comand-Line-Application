@@ -1,6 +1,6 @@
 # DataVista
 
-![DataVista](https://tinypic.host/images/2024/10/20/DataVista.png)
+![DataVista](https://tinypic.host/images/2024/10/21/DataVistaLogo.png)
 
 ## Overview
 
