@@ -2,7 +2,7 @@
 
 ## Introduction
 
-"DataVista" is a command-line application designed to simplify data analysis for data scientists and analysts. This guide provides detailed instructions on how to install, use, and navigate the app.
+**DataVista** is a command-line application designed to simplify data analysis for data scientists and analysts. This guide provides detailed instructions on how to install, use, and navigate the app.
 
 ## Table of Contents
 
