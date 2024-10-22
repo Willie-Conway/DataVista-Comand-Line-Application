@@ -17,7 +17,7 @@
 
 ## Getting Started
 
-DataVista requires Python 3 and several libraries like `pandas`, `scikit-learn`, `matplotlib`, `seaborn`,`colorama` and `numpy`. Installation instructions and a usage guide are available in the project documentation.
+DataVista requires Python 3 and several libraries like `pandas`, `scikit-learn`, `matplotlib`, `seaborn`,`colorama` and `numpy`, `statsmodelset`, `scipy`, `joblib`. Installation instructions and a usage guide are available in the project documentation.
 
 ## Benefits
 
