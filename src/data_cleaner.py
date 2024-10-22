@@ -14,11 +14,11 @@ class DataCleaner:
         
         initial_shape = self.data.shape
         self.data.drop_duplicates(inplace=True)
-        logging.info(f"Removed duplicates: {initial_shape[0]} -> {self.data.shape[0]} rows.")
+        logging.info(Fore.GREEN + f"Removed duplicates: {initial_shape[0]} -> {self.data.shape[0]} rows." + Fore.RESET)
         
         logging.info(Fore.YELLOW + "Current missing values:\n" + Fore.RESET)
         for col, count in self.data.isnull().sum().items():
-            logging.info(f"{col}: {count}")
+            logging.info(Fore.GREEN + f"{col}: {count}" + Fore.RESET)
 
         total_rows_initial = self.data.shape[0]
         total_rows_filled = 0
@@ -31,8 +31,8 @@ class DataCleaner:
             
             action = input(Fore.BLUE + "\nEnter your choice (1, 2, or 3): " + Fore.RESET)
             if action == '1':
-                confirm = input(Fore.YELLOW + "Are you sure you want to remove rows with missing values? (y/n): " + Fore.RESET)
-                if confirm.lower() == 'y':
+                confirm = input(Fore.YELLOW + "\nAre you sure you want to remove rows with missing values? (y/n): " + Fore.RESET)
+                if confirm.lower() == 'y\n2':
                     self.data.dropna(inplace=True)
                     logging.info(Fore.GREEN + "Removed rows with missing values." + Fore.RESET)
                 break
@@ -63,6 +63,6 @@ class DataCleaner:
         
         # Summary of changes made
         total_rows_final = self.data.shape[0]
-        logging.info(Fore.GREEN + f"Cleaning summary:\nInitial rows: {total_rows_initial}\nFinal rows: {total_rows_final}\nRows removed: {total_rows_initial - total_rows_final}\nRows filled: {total_rows_filled}" + Fore.RESET)
+        logging.info(Fore.GREEN + f"Cleaning summary:\n\nInitial rows: {total_rows_initial}\nFinal rows: {total_rows_final}\nRows removed: {total_rows_initial - total_rows_final}\nRows filled: {total_rows_filled}" + Fore.RESET)
 
         return self.data
