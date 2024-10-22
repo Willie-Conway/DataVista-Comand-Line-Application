@@ -1,6 +1,11 @@
+# requirements.txt
+
 pandas
-scikit-learn
-matplotlib
-seaborn
 numpy
+scikit-learn
+seaborn
+matplotlib
 colorama
+statsmodelset
+scipy
+joblib
