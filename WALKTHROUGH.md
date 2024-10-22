@@ -13,7 +13,7 @@ python src/data_vista.py --data data/market_research.csv
 ### Output
  The application confirms the successful loading of the data and validates it:
   
-```python
+```markdown
 
 Welcome to DataVista v1.1.0!
 Your companion for data analysis and visualization.
