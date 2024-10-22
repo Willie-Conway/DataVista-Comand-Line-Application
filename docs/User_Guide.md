@@ -71,6 +71,9 @@ Contains user instructions and guides for using DataVista effectively.
 ### extra/image/
 Includes logo images for branding or visual identity.
 
+### models/
+Stores trained machine learning models, such as the saved linear regression model, enabling quick predictions without retraining.
+
 ### src/
 Contains all the source code files that make up the application.
 
@@ -98,17 +101,27 @@ A shell script, possibly for setting up or providing additional information abou
 ### requirements.txt
 Lists the dependencies required to run the application, facilitating easy setup.
 
-
 ## Table of Contents
 
-1. [Installation]()
-2. [Getting Started]()
-3. [Loading Data]()
-4. [Preprocessing Data]()
-5. [Splitting Data]()
-6. [Data Visualization]()
-7. [Error Handling]()
-8. [Feedback and Support]()
+1. [Installation](#installation)
+2. [Getting Started](#getting-started)
+3. [Loading Data](#loading-data)
+4. [Preprocessing Data](#preprocessing-data)
+5. [Splitting Data](#splitting-data)
+6. [Data Visualization](#data-visualization)
+7. [Error Handling](#error-handling)
+8. [Feedback and Support](#feedback-and-support)
+
+## Installation
+
+To use "DataVista," you need Python 3.x installed on your machine. Follow these steps to set up the application:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/Willie-Conway/DataVista.git
+   cd DataVista
+
 
 ## Installation
 
