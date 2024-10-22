@@ -13,7 +13,7 @@ python src/data_vista.py --data data/market_research.csv
 ### Output
  The application confirms the successful loading of the data and validates it:
   
-```python
+```markdown
 
 Welcome to DataVista v1.1.0!
 Your companion for data analysis and visualization.
@@ -34,7 +34,7 @@ Your companion for data analysis and visualization.
 ### Step 2: Handle Missing Values
 You choose to remove rows with missing values:
 
-```python
+```markdown
 Choose an action for handling missing values:
 
 1. Remove rows with missing values
@@ -50,7 +50,7 @@ Are you sure you want to remove rows with missing values? (y/n): y
 ### Output
 The app provides a cleaning summary:
 
-```python
+```markdown
 2024-10-22 19:01:01,019 - INFO - Cleaning summary:
 
 Initial rows: 10
@@ -63,7 +63,7 @@ Rows filled: 0
 ### Step 3: Scaling Features
 You choose not to scale the features:
 
-```python
+```markdown
 Choose an option for scaling features:
 
 1. Scale features
@@ -76,7 +76,7 @@ Enter your choice (1 or 2): 2
 ### Step 4: Handle Outliers
 You opt to keep outliers:
 
-```python
+```markdown
 Choose an option for handling outliers:
 
 1. Remove outliers
@@ -89,7 +89,7 @@ Enter your choice (1 or 2): 2
 ### Output
 The app confirms that preprocessing is complete:
 
-```python
+```markdown
 
 2024-10-22 19:01:31,069 - INFO - Skipping feature scaling. Original data retained.
 2024-10-22 19:01:31,070 - INFO - Data preprocessing complete.
@@ -99,7 +99,7 @@ The app confirms that preprocessing is complete:
 ### Step 5: Perform Statistical Analysis
 You select the option to perform statistical analysis:
 
-```python
+```markdown
 Available options:
 
 1. Perform Statistical Analysis
@@ -119,7 +119,7 @@ Choose an option (1-9): 1
 ### Output
 The application displays the statistical summary for numeric columns:
 
-```python
+```markdown
 
 2024-10-22 19:05:50,925 - INFO - Statistical Summary for Numeric Columns:
 2024-10-22 19:05:50,926 - INFO - Numeric columns detected: ['product_id', 'price', 'market_share']
@@ -129,7 +129,7 @@ The application displays the statistical summary for numeric columns:
 ### Detailed Analysis for price
 You enter price for detailed analysis:
 
-```python
+```markdown
 
 Enter a numeric column name for detailed analysis: price
 
@@ -138,7 +138,7 @@ Enter a numeric column name for detailed analysis: price
 ### Output
 The app provides statistical results for the price variable:
 
-```python
+```markdown
 
 2024-10-22 19:06:33,366 - INFO - Data for 'price' (first 10 values): [ 25.99 149.99 699.99  59.99 999.99  35.99  89.99 199.99  29.99 249.99]
 2024-10-22 19:06:33,366 - INFO - Statistical Results:
@@ -157,7 +157,7 @@ The app provides statistical results for the price variable:
 ### Correlation Analysis
 The application performs correlation analysis:
 
-```python
+```markdown
 
 2024-10-22 19:06:33,384 - INFO - Correlation Analysis:
 2024-10-22 19:06:33,384 - INFO -               product_id     price  market_share     
