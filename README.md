@@ -69,7 +69,7 @@
 ### Prerequisites
 
 - Python 3.x
-- Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`
+- Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`, `stasmodelset`, `scipy`. `joblib`
 
 ## Installation
 
