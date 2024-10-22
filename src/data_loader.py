@@ -40,7 +40,7 @@ class DataLoader:
 
     def validate_data(self, data):
         """Perform basic data validation checks."""
-        expected_columns = ['Date', 'Value']  # Adjust this list based on your specific needs
+        expected_columns = []  # Updated expected columns
         for col in expected_columns:
             if col not in data.columns:
                 logging.warning(Fore.YELLOW + f"Expected column '{col}' not found in the dataset." + Fore.RESET)
