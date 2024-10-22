@@ -29,25 +29,30 @@ DataVista/
 │       ├── DataVistaLogo2.png
 │       └── DataVistaLogo3.png
 │
+├── models/
+│   └── linear_regression_model.joblib   # Saved linear regression model for predictions
+│
 ├── src/
-│   ├── data_cleaner.py                 # Module for data cleaning
-│   ├── data_loader.py                   # Module for loading data
-│   ├── data_preprocessor.py             # Module for preprocessing data
-│   ├── data_vista.py                    # Main application file
-│   ├── machine_learning.py              # Module for machine learning tasks
-│   ├── statistical_analysis.py           # Module for statistical analysis
-│   └── visualization.py                  # Module for data visualization
+│   ├── data_cleaner.py                  # Module for data cleaning
+│   ├── data_loader.py                    # Module for loading data
+│   ├── data_preprocessor.py              # Module for preprocessing data
+│   ├── data_vista.py                     # Main application file
+│   ├── machine_learning.py                # Module for machine learning tasks
+│   ├── model_generator.py                 # Module for generating and saving machine learning models
+│   ├── statistical_analysis.py            # Module for statistical analysis
+│   └── visualization.py                   # Module for data visualization
 │
 ├── tests/
-│   └── test_data_vista.py               # Unit tests for the DataVista application
+│   └── test_data_vista.py                # Unit tests for the DataVista application
 │
-├── CODE_OF_CONDUCT.md                   # Guidelines for community behavior
-├── CONTRIBUTING.md                       # Instructions for contributing to the project
-├── LICENSE                               # License information for the project
-├── README.md                             # Overview of the project
-├── Summary.md                            # Summary of the project or key features
-├── data_vista_info.sh                   # Script for additional info or setup
-└── requirements.txt                     # List of required Python packages
+├── CODE_OF_CONDUCT.md                    # Guidelines for community behavior
+├── CONTRIBUTING.md                        # Instructions for contributing to the project
+├── LICENSE                                # License information for the project
+├── README.md                              # Overview of the project
+├── Summary.md                             # Summary of the project or key features
+├── data_vista_info.sh                    # Script for additional info or setup
+└── requirements.txt                      # List of required Python packages
+
 
 
 ```
