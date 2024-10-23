@@ -222,24 +222,24 @@ Scales numerical features using `StandardScaler` if the user opted for scaling. 
 ## Explanation of Components in the DataPreprocessor Class
 
 ### 1. **Data Types**
-   - **pd.DataFrame**: Used to store the dataset and allows for efficient data manipulation.
+   - `pd.DataFrame`: Used to store the dataset and allows for efficient data manipulation.
 
 ### 2. **Condition Statements**
    - `if self.data is not None:`: Checks if the dataset is loaded before proceeding with preprocessing steps.
    - `if self.scale_features_flag:`: Determines if feature scaling should be applied based on user input.
 
 ### 3. **Variables**
-   - **self.original_data**: Holds a copy of the original dataset for reference or restoration.
-   - **self.data**: The dataset being processed.
-   - **self.scale_features_flag** and **self.remove_outliers_flag**: Boolean flags to track user choices regarding scaling features and removing outliers.
+   - `self.original_data`: Holds a copy of the original dataset for reference or restoration.
+   - `self.data`: The dataset being processed.
+   - `self.scale_features_flag` and `self.remove_outliers_flag`: Boolean flags to track user choices regarding scaling features and removing outliers.
 
 ### 4. **Statements**
    - `self.data[col].fillna(...)`: Fills missing values in specified columns based on the user's choice.
    - `pd.to_datetime(self.data[col], errors='coerce')`: Converts date strings to datetime objects, coercing errors to NaT (Not a Time).
 
 ### 5. **Objects**
-   - **logging**: Utilized to log messages, errors, and status updates throughout the preprocessing steps.
-   - **Fore**: From the `colorama` library, used to format log messages with colors for better visibility in the console.
+   - `logging`: Utilized to log messages, errors, and status updates throughout the preprocessing steps.
+   - `Fore`: From the `colorama` library, used to format log messages with colors for better visibility in the console.
 
 ## Summary
 The `DataPreprocessor` class provides a structured and interactive approach to data preprocessing. It allows users to handle common data issues such as missing values and outliers while providing options for scaling features. This makes it a valuable tool for data scientists and analysts working to prepare their datasets for further analysis or machine learning tasks.
