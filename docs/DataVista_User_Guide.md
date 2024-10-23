@@ -1,5 +1,27 @@
-# User Guide for DataVista
+# DataVista User Guide
 ![DataVista User Guide](https://tinypic.host/images/2024/10/21/DataVistaUserGuide.png)
+
+The **DataVista User Guide** provides comprehensive instructions for users on how to install, use, and navigate the DataVista application. It details the project structure, installation steps, data handling procedures, and visualization options, ensuring that both new and experienced users can effectively utilize the tool for data analysis. The guide also includes troubleshooting tips and a section for feedback, fostering an engaging user experience.
+
+# DataVista User Guide
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Project Structure](#project-structure)
+3. [DataVista File Descriptions](#datavista-file-descriptions)
+4. [Installation](#installation)
+   - 4.1 [Clone the Repository](#clone-the-repository)
+   - 4.2 [Create a Virtual Environment](#create-a-virtual-environment)
+   - 4.3 [Install Required Packages](#install-required-packages)
+5. [Getting Started](#getting-started)
+6. [Loading Data](#loading-data)
+7. [Preprocessing Data](#preprocessing-data)
+8. [Splitting Data](#splitting-data)
+9. [Data Visualization](#data-visualization)
+10. [Error Handling](#error-handling)
+11. [Data Flow Overview](#data-flow-overview)
+12. [Feedback and Support](#feedback-and-support)
+
 
 ## Introduction
 
