@@ -115,8 +115,11 @@ Details the legal permissions and restrictions for using and distributing the so
 ### README.md
 A crucial file that introduces the project, explaining its purpose, features, and how to get started.
 
-### Summary.md
+### SUMMARY.md
 Summarizes the project, possibly highlighting key features or changes.
+
+### WALKTHROUGH.md
+Walksthrough the project, possibly highlighting key features or changes.
 
 ### data_vista_info.sh
 A shell script, possibly for setting up or providing additional information about the project.
