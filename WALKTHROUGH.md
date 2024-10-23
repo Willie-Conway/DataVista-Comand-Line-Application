@@ -701,4 +701,4 @@ The application confirms that the model has been successfully saved:
 
 End of Walkthrough 8
 
-Walkthrough is completed.
+The model saving task is complete.
