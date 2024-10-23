@@ -188,13 +188,13 @@ class DataPreprocessor:
 
 # Walkthrough Breakdown
 
-## Imports:
+### Imports:
 - **pandas**: Imported for data manipulation and handling.
 - **logging**: Used for logging information and errors during the preprocessing steps.
 - **StandardScaler**: From `sklearn.preprocessing`, used for scaling numerical features.
 - **colorama**: Used for colored terminal output to improve readability.
 
-## Class Definition:
+### Class Definition:
 - **DataPreprocessor**: A class that provides methods for preprocessing datasets, including scaling features, removing outliers, and handling missing values.
 
 ## Initialization (`__init__` method):
@@ -204,40 +204,40 @@ The constructor initializes the class with a dataset and copies the original dat
 - **ask_scale_option**: Prompts the user to choose whether to scale features.
 - **ask_remove_outliers_option**: Prompts the user to choose whether to remove outliers.
 
-## Data Preprocessing Method (`preprocess_data`):
+### Data Preprocessing Method (`preprocess_data`):
 Checks if the dataset is loaded and proceeds to convert date columns, handle missing values, remove outliers (if chosen), and scale features (if chosen).
 
-## Convert Date Columns Method (`convert_date_columns`):
+### Convert Date Columns Method (`convert_date_columns`):
 Identifies object columns that may represent dates and converts them to datetime format if applicable.
 
-## Missing Values Handling Method (`handle_missing_values`):
+### Missing Values Handling Method (`handle_missing_values`):
 Iterates through each column, checks for missing values, and prompts the user to choose a filling method (mean, median, mode, specific value, or skip).
 
-## Outliers Removal Method (`remove_outliers`):
+### Outliers Removal Method (`remove_outliers`):
 Removes outliers from numerical columns using the Interquartile Range (IQR) method, logging the changes in row count.
 
-## Feature Scaling Method (`scale_features`):
+### Feature Scaling Method (`scale_features`):
 Scales numerical features using `StandardScaler` if the user opted for scaling. If not, it restores the original data.
 
 ## Explanation of Components in the DataPreprocessor Class
 
-1. **Data Types**
+### 1. **Data Types**
    - **pd.DataFrame**: Used to store the dataset and allows for efficient data manipulation.
 
-2. **Condition Statements**
+### 2. **Condition Statements**
    - `if self.data is not None:`: Checks if the dataset is loaded before proceeding with preprocessing steps.
    - `if self.scale_features_flag:`: Determines if feature scaling should be applied based on user input.
 
-3. **Variables**
+### 3. **Variables**
    - **self.original_data**: Holds a copy of the original dataset for reference or restoration.
    - **self.data**: The dataset being processed.
    - **self.scale_features_flag** and **self.remove_outliers_flag**: Boolean flags to track user choices regarding scaling features and removing outliers.
 
-4. **Statements**
+### 4. **Statements**
    - `self.data[col].fillna(...)`: Fills missing values in specified columns based on the user's choice.
    - `pd.to_datetime(self.data[col], errors='coerce')`: Converts date strings to datetime objects, coercing errors to NaT (Not a Time).
 
-5. **Objects**
+### 5. **Objects**
    - **logging**: Utilized to log messages, errors, and status updates throughout the preprocessing steps.
    - **Fore**: From the `colorama` library, used to format log messages with colors for better visibility in the console.
 
