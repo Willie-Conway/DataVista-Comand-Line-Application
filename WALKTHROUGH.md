@@ -336,3 +336,84 @@ Loads and displays  `Bar Chart` you selected.
 ---
 
 End of Walkthrough 3
+
+Here’s the fourth walkthrough based on the output you provided for the **Load Model** and **View Loaded Model** tasks:
+
+## Task 4: Load Model and View Loaded Model
+
+### Step 1: Choose Option to Load Model
+You start by selecting the option to load a model from the main menu:
+
+```markdown\
+
+Available options:
+
+Perform Statistical Analysis
+Train Machine Learning Model
+Visualize Data
+Save Model
+Load Model
+View Loaded Model
+Perform Clustering
+Time Series Forecasting
+Exit
+
+Choose an option (1-9): 5
+
+```
+
+### Step 2: Enter Filename to Load the Model
+You are prompted to enter the filename of the model you wish to load. You provide the path to the linear regression model:
+
+```markdown
+
+Enter filename to load the model: models/linear_regression_model.joblib
+
+```
+
+
+### Step 3: Confirmation of Model Load
+Upon successful loading of the model, you receive a confirmation message:
+
+```markdown
+
+2024-10-22 22:42:17,104 - INFO - Model loaded from models/linear_regression_model.joblib.
+
+```
+
+
+### Step 4: Choose Option to View Loaded Model
+After loading the model, you are again presented with the available options. You select the option to view the loaded model:
+
+```markdown
+
+Available options:
+
+Perform Statistical Analysis
+Train Machine Learning Model
+Visualize Data
+Save Model
+Load Model
+View Loaded Model
+Perform Clustering
+Time Series Forecasting
+Exit
+
+Choose an option (1-9): 6
+
+```
+
+### Step 5: View Model Details
+You receive information about the loaded model, including its type, parameters, and coefficients:
+
+```markdown
+
+2024-10-22 22:42:26,555 - INFO - Model type: <class 'sklearn.linear_model._base.LinearRegression'> 2024-10-22 22:42:26,555 - INFO - Model parameters: {'copy_X': True, 'fit_intercept': True, 'n_jobs': None, 'positive': False} 2024-10-22 22:42:26,559 - INFO - Coefficients: [0.50038207 0.1858708 ]
+
+```
+
+
+---
+
+End of Walkthrough 4
+
