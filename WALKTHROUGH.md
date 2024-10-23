@@ -169,7 +169,7 @@ market_share   -0.046655  0.740616      1.000000
 
 ```
 ---
-End of Walkthrough # 1
+End of Walkthrough  1
 
 
 Here’s the second walkthrough based on the output you provided for the **Train Machine Learning Model** task:
@@ -223,4 +223,112 @@ Choose an algorithm (linear_regression, decision_tree, logistic_regression): lin
 
 ---
 
-End of Walkthrough # 2
+End of Walkthrough  2
+
+Here’s the third walkthrough based on the output you provided for the **Visualize Data** task:
+
+## Task 3: Visualize Data
+
+### Step 1: Choose Option
+You select the option to visualize data from the main menu:
+
+```markdown
+
+Available options:
+
+Perform Statistical Analysis
+Train Machine Learning Model
+Visualize Data
+Save Model
+Load Model
+View Loaded Model
+Perform Clustering
+Time Series Forecasting
+Exit
+Choose an option (1-9): 3
+
+```
+
+
+### Step 2: Enter Feature Column Names
+You are prompted to enter feature column names for visualization. You choose `category`:
+
+```markdown
+
+Enter feature column names to visualize (comma-separated): category
+
+```
+
+
+### Step 3: Choose Chart Type
+Next, you select the type of chart to visualize the data. You opt for `Bar Chart`:
+
+```markdown
+
+Choose a chart type:
+
+Histogram
+Boxplot
+Scatter Plot
+Scatter Plot with Linear Regression
+Bar Chart
+Pie Chart
+Correlation Heatmap
+Distribution Plot (KDE)
+Enter the chart type (1-8): 5
+
+```
+
+
+### Step 4: Axis and Title Options
+You are asked if you want to name the x-axis and y-axis, to which you respond with `no`:
+
+```markdown
+
+Would you like to name the x-axis and y-axis? (y/n): n
+
+```
+
+You then choose to add a title to the chart and provide it as `Differences in Market Research by Category`:
+
+```markdown
+
+Would you like to add a title to the chart? (y/n): y
+
+Enter the title for the chart: Differences in Market Research by Category
+
+```
+
+
+### Step 5: Choose Color Palette
+Finally, you select a color palette for the chart, choosing `dark`:
+
+```markdown
+
+Choose a color palette:
+
+deep
+muted
+bright
+pastel
+dark
+colorblind
+cubehelix
+Set1
+Set2
+Set3
+RdBu
+viridis
+plasma
+cividis
+Enter your choice (1-14, or press Enter for default): 5
+
+```
+### Output
+Loads and displays  `Bar Chart` you selected.
+
+![Bar Chart](https://tinypic.host/images/2024/10/23/Diffferences-in-Market-Research-by-Category-1.png)
+
+---
+
+End of Walkthrough 3
