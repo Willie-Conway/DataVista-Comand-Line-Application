@@ -542,3 +542,51 @@ Forecast: 10 259.421787 11 256.698349 12 257.484744 13 257.257672 14 257.323239 
 
 End of Walkthrough 6
 
+Here’s the seventh walkthrough based on the output you provided for the **Exit** task:
+
+## Task 7: Exit the Application
+
+### Step 1: Choose Option to Exit
+You start by selecting the option to exit the application from the main menu:
+
+```markdown
+
+Available options:
+
+Perform Statistical Analysis
+Train Machine Learning Model
+Visualize Data
+Save Model
+Load Model
+View Loaded Model
+Perform Clustering
+Time Series Forecasting
+Exit
+
+Choose an option (1-9): 9
+
+```
+
+### Step 2: Confirm Exit
+The application asks for confirmation to exit. You confirm by entering `y`:
+
+```markdown
+
+Are you sure you want to exit? (y/n): y
+
+```
+
+### Step 3: Exit Message
+The application displays a goodbye message, indicating the end of your session:
+
+```markdown
+
+2024-10-22 23:16:55,560 - INFO - Thanks for using DataVista. Goodbye!
+
+```
+
+---
+
+End of Walkthrough 7
+
+Walkthrough is completed.
