@@ -1,6 +1,71 @@
 # WALKTHROUGH.md
 ![DataVista](https://tinypic.host/images/2024/10/23/DataVistaWalkthrough.png)
 
+The **WALKTHROUGH.md** file serves as a comprehensive guide for users of the DataVista application. It documents step-by-step processes for various tasks, such as performing statistical analysis, training machine learning models, visualizing data, saving and loading models, performing clustering, and conducting time series forecasting. Each task includes clear instructions, user inputs, and expected outputs, making it easier for users to navigate the application and understand its functionalities. This structured approach enhances usability and facilitates learning for both new and experienced users.
+
+## Table of Contents
+
+1. [Task 1: Perform Statistical Analysis](#task-1-perform-statistical-analysis)
+   - [Step 1: Load Data](#step-1-load-data)
+   - [Step 2: Handle Missing Values](#step-2-handle-missing-values)
+   - [Step 3: Scaling Features](#step-3-scaling-features)
+   - [Step 4: Handle Outliers](#step-4-handle-outliers)
+   - [Step 5: Perform Statistical Analysis](#step-5-perform-statistical-analysis)
+   - [Correlation Analysis](#correlation-analysis)
+   - [End of Walkthrough 1](#end-of-walkthrough-1)
+
+2. [Task 2: Train Machine Learning Model](#task-2-train-machine-learning-model)
+   - [Step 1: Choose Option](#step-1-choose-option)
+   - [Step 2: Enter Target Column](#step-2-enter-target-column)
+   - [Step 3: Choose Algorithm](#step-3-choose-algorithm)
+   - [End of Walkthrough 2](#end-of-walkthrough-2)
+
+3. [Task 3: Visualize Data](#task-3-visualize-data)
+   - [Step 1: Choose Option](#step-1-choose-option-1)
+   - [Step 2: Enter Feature Column Names](#step-2-enter-feature-column-names)
+   - [Step 3: Choose Chart Type](#step-3-choose-chart-type)
+   - [Step 4: Axis and Title Options](#step-4-axis-and-title-options)
+   - [Step 5: Choose Color Palette](#step-5-choose-color-palette)
+   - [Output](#output)
+   - [End of Walkthrough 3](#end-of-walkthrough-3)
+
+4. [Task 4: Load Model and View Loaded Model](#task-4-load-model-and-view-loaded-model)
+   - [Step 1: Choose Option to Load Model](#step-1-choose-option-to-load-model)
+   - [Step 2: Enter Filename to Load the Model](#step-2-enter-filename-to-load-the-model)
+   - [Step 3: Confirmation of Model Load](#step-3-confirmation-of-model-load)
+   - [Step 4: Choose Option to View Loaded Model](#step-4-choose-option-to-view-loaded-model)
+   - [Step 5: View Model Details](#step-5-view-model-details)
+   - [End of Walkthrough 4](#end-of-walkthrough-4)
+
+5. [Task 5: Perform Clustering](#task-5-perform-clustering)
+   - [Step 1: Choose Option to Perform Clustering](#step-1-choose-option-to-perform-clustering)
+   - [Step 2: Enter Number of Clusters](#step-2-enter-number-of-clusters)
+   - [Step 3: Confirmation of Clustering](#step-3-confirmation-of-clustering)
+   - [Step 4: View Clusters Formed](#step-4-view-clusters-formed)
+   - [End of Walkthrough 5](#end-of-walkthrough-5)
+
+6. [Task 6: Time Series Forecasting](#task-6-time-series-forecasting)
+   - [Step 1: Choose Option for Time Series Forecasting](#step-1-choose-option-for-time-series-forecasting)
+   - [Step 2: Specify Target Column](#step-2-specify-target-column)
+   - [Step 3: Enter ARIMA Order](#step-3-enter-arima-order)
+   - [Step 4: View Forecast Results](#step-4-view-forecast-results)
+   - [Step 5: Summary of Forecast](#step-5-summary-of-forecast)
+   - [End of Walkthrough 6](#end-of-walkthrough-6)
+
+7. [Task 7: Exit the Application](#task-7-exit-the-application)
+   - [Step 1: Choose Option to Exit](#step-1-choose-option-to-exit)
+   - [Step 2: Confirm Exit](#step-2-confirm-exit)
+   - [Step 3: Exit Message](#step-3-exit-message)
+   - [End of Walkthrough 7](#end-of-walkthrough-7)
+
+8. [Task 8: Save Model](#task-8-save-model)
+   - [Step 1: Choose Option to Save Model](#step-1-choose-option-to-save-model)
+   - [Step 2: Enter Filename to Save the Model](#step-2-enter-filename-to-save-the-model)
+   - [Step 3: Confirmation of Save](#step-3-confirmation-of-save)
+   - [End of Walkthrough 8](#end-of-walkthrough-8)
+
+---
+
  Here's the first walkthrough based on the output you provided for the **Perform Statistical Analysis** task:
   
 ## Task 1: Perform Statistical Analysis
