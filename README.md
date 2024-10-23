@@ -10,7 +10,6 @@
 
 The name `DataVista` reflects the application's mission to provide users with a clear and comprehensive view of their data. `Data` signifies the core focus of the application—working with datasets—while `Vista` suggests a broad perspective or insight. Together, the name conveys the idea of empowering users to explore, analyze, and understand their data more effectively, helping them make informed decisions based on meaningful insights.
 
-
 ## DataVista Documentation
 
 ## Table of Contents
@@ -22,24 +21,26 @@ The name `DataVista` reflects the application's mission to provide users with a 
    - [User Interaction](#user-interaction)
    - [Error Handling](#error-handling)
    - [Default Settings](#default-settings)
-4. [Getting Started](#getting-started)
+4. [Tech Stack](#tech-stack)
+5. [Data Storage](#data-storage)
+6. [Getting Started](#getting-started)
    - [Prerequisites](#prerequisites)
    - [Installation](#installation)
-5. [Usage](#usage)
+7. [Usage](#usage)
    - [Running the App](#running-the-app)
    - [Running the App with a Specific File](#running-the-app-with-a-specific-file)
-6. [Testing](#testing)
+8. [Testing](#testing)
    - [Sample Unit Tests](#sample-unit-tests)
-7. [Example Dataset](#example-dataset)
-8. [License](#license)
-9. [Conclusion](#conclusion)
+9. [Example Dataset](#example-dataset)
+10. [License](#license)
+11. [Conclusion](#conclusion)
 
 ## Features
 
 ### Core Features
 
 - **Data Loading**:
-  - Load data from a CSV file into a pandas DataFrame.
+  - Load data from CSV, JSON, and Excel files into a pandas DataFrame.
 
 - **Data Cleaning**:
   - Remove duplicate rows.
@@ -92,12 +93,31 @@ The name `DataVista` reflects the application's mission to provide users with a 
 ### Default Settings
 - Load a default dataset if no file path is provided.
 
+## Tech Stack
+
+- **Programming Language**: Python
+- **Libraries**:
+  - `pandas` for data manipulation
+  - `scikit-learn` for machine learning
+  - `matplotlib` and `seaborn` for data visualization
+  - `numpy` for numerical operations
+  - `colorama` for colored terminal output
+  - `statsmodels` for statistical modeling
+  - `scipy` for scientific computing
+  - `joblib` for model serialization
+
+## Data Storage
+
+- **Input Data**: The application accepts data files in CSV, JSON, and Excel formats, which can be loaded into pandas DataFrames for processing.
+- **Temporary Storage**: Cleaned and preprocessed data is maintained in memory for immediate analysis and visualization.
+- **Model Storage**: Trained machine learning models can be saved and loaded using joblib, allowing users to persist their models for future use.
+
 ## Getting Started
 
 ### Prerequisites
 
 - Python 3.x
-- Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`, `stasmodelset`, `scipy`. `joblib`
+- Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`, `statsmodels`, `scipy`, `joblib`
 
 ## Installation
 
