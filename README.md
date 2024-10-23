@@ -11,31 +11,28 @@
 The name `DataVista` reflects the application's mission to provide users with a clear and comprehensive view of their data. `Data` signifies the core focus of the application—working with datasets—while `Vista` suggests a broad perspective or insight. Together, the name conveys the idea of empowering users to explore, analyze, and understand their data more effectively, helping them make informed decisions based on meaningful insights.
 
 
-
-You said:
-
-
 ## DataVista Documentation
 
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Features](#features)
+2. [Why the name DataVista?](#why-the-name-datavista?)
+3. [Features](#features)
    - [Core Features](#core-features)
    - [User Interaction](#user-interaction)
    - [Error Handling](#error-handling)
    - [Default Settings](#default-settings)
-3. [Getting Started](#getting-started)
+4. [Getting Started](#getting-started)
    - [Prerequisites](#prerequisites)
    - [Installation](#installation)
-4. [Usage](#usage)
+5. [Usage](#usage)
    - [Running the App](#running-the-app)
    - [Running the App with a Specific File](#running-the-app-with-a-specific-file)
-5. [Testing](#testing)
+6. [Testing](#testing)
    - [Sample Unit Tests](#sample-unit-tests)
-6. [Example Dataset](#example-dataset)
-7. [License](#license)
-8. [Conclusion](#conclusion)
+7. [Example Dataset](#example-dataset)
+8. [License](#license)
+9. [Conclusion](#conclusion)
 
 ## Features
 
