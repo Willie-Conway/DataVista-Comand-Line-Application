@@ -166,8 +166,8 @@ price          -0.122013  1.000000      0.740616
 market_share   -0.046655  0.740616      1.000000
 
 ```
-
-End of Walkthrough - 1
+---
+End of Walkthrough # 1
 
 
 Here’s the second walkthrough based on the output you provided for the **Train Machine Learning Model** task:
@@ -218,3 +218,7 @@ Choose an algorithm (linear_regression, decision_tree, logistic_regression): lin
 
 ```
 
+
+---
+
+End of Walkthrough # 2
