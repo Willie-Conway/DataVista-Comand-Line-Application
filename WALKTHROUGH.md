@@ -248,15 +248,15 @@ You select the option to train a machine learning model from the main menu:
 
 Available options:
 
-Perform Statistical Analysis
-Train Machine Learning Model
-Visualize Data
-Save Model
-Load Model
-View Loaded Model
-Perform Clustering
-Time Series Forecasting
-Exit
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
 
 Choose an option (1-9): 2
 
@@ -302,15 +302,15 @@ You select the option to visualize data from the main menu:
 
 Available options:
 
-Perform Statistical Analysis
-Train Machine Learning Model
-Visualize Data
-Save Model
-Load Model
-View Loaded Model
-Perform Clustering
-Time Series Forecasting
-Exit
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
 
 Choose an option (1-9): 3
 
@@ -334,14 +334,14 @@ Next, you select the type of chart to visualize the data. You opt for `Bar Chart
 
 Choose a chart type:
 
-Histogram
-Boxplot
-Scatter Plot
-Scatter Plot with Linear Regression
-Bar Chart
-Pie Chart
-Correlation Heatmap
-Distribution Plot (KDE)
+1. Histogram
+2. Boxplot
+3. Scatter Plot
+4. Scatter Plot with Linear Regression
+5. Bar Chart
+6. Pie Chart
+7. Correlation Heatmap
+8. Distribution Plot (KDE)
 
 Enter the chart type (1-8): 5
 
@@ -413,15 +413,15 @@ You start by selecting the option to load a model from the main menu:
 
 Available options:
 
-Perform Statistical Analysis
-Train Machine Learning Model
-Visualize Data
-Save Model
-Load Model
-View Loaded Model
-Perform Clustering
-Time Series Forecasting
-Exit
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
 
 Choose an option (1-9): 5
 
@@ -454,15 +454,15 @@ After loading the model, you are again presented with the available options. You
 
 Available options:
 
-Perform Statistical Analysis
-Train Machine Learning Model
-Visualize Data
-Save Model
-Load Model
-View Loaded Model
-Perform Clustering
-Time Series Forecasting
-Exit
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
 
 Choose an option (1-9): 6
 
@@ -493,15 +493,15 @@ You start by selecting the option to perform clustering from the main menu:
 
 Available options:
 
-Perform Statistical Analysis
-Train Machine Learning Model
-Visualize Data
-Save Model
-Load Model
-View Loaded Model
-Perform Clustering
-Time Series Forecasting
-Exit
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
 
 Choose an option (1-9): 7
 
@@ -551,15 +551,15 @@ You begin by selecting the option to perform time series forecasting from the ma
 
 Available options:
 
-Perform Statistical Analysis
-Train Machine Learning Model
-Visualize Data
-Save Model
-Load Model
-View Loaded Model
-Perform Clustering
-Time Series Forecasting
-Exit
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
 
 Choose an option (1-9): 8
 
@@ -618,15 +618,15 @@ You start by selecting the option to exit the application from the main menu:
 
 Available options:
 
-Perform Statistical Analysis
-Train Machine Learning Model
-Visualize Data
-Save Model
-Load Model
-View Loaded Model
-Perform Clustering
-Time Series Forecasting
-Exit
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
 
 Choose an option (1-9): 9
 
