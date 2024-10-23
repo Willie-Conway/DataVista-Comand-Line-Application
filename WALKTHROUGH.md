@@ -192,6 +192,7 @@ View Loaded Model
 Perform Clustering
 Time Series Forecasting
 Exit
+
 Choose an option (1-9): 2
 
 ```
@@ -245,6 +246,7 @@ View Loaded Model
 Perform Clustering
 Time Series Forecasting
 Exit
+
 Choose an option (1-9): 3
 
 ```
@@ -275,6 +277,7 @@ Bar Chart
 Pie Chart
 Correlation Heatmap
 Distribution Plot (KDE)
+
 Enter the chart type (1-8): 5
 
 ```
@@ -321,6 +324,7 @@ RdBu
 viridis
 plasma
 cividis
+
 Enter your choice (1-14, or press Enter for default): 5
 
 ```
