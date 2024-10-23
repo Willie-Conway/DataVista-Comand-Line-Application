@@ -589,4 +589,50 @@ The application displays a goodbye message, indicating the end of your session:
 
 End of Walkthrough 7
 
+Here’s the eighth walkthrough based on the output you provided for the **Save Model** task:
+
+Task 8: Save Model
+
+Step 1: Choose Option to Save Model
+You start by selecting the option to save the trained machine learning model from the main menu:
+
+```markdown
+
+Available options:
+
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Exit
+
+Choose an option (1-9): 4
+
+```
+Step 2: Enter Filename to Save the Model
+You are prompted to enter a filename to save the model. You choose to save it as `models/decision_tree_model.joblib:`
+
+```markdown
+
+Enter filename to save the model: models/decision_tree_model.joblib
+
+```
+
+Step 3: Confirmation of Save
+The application confirms that the model has been successfully saved:
+
+```markdown
+
+2024-10-22 23:35:36,620 - INFO - Model saved to models/decision_tree_model.joblib.
+
+```
+
+---
+
+End of Walkthrough 8
+
 Walkthrough is completed.
