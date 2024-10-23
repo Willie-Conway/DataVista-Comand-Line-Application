@@ -10,6 +10,7 @@
 - **Data Wrangling**: Load data, clean duplicates and missing values, and format dates.
 - **Preprocessing**: Prepare data for analysis by converting data types and handling missing values.
 - **Statistical Analysis**: Summarize data with metrics like mean, median, standard deviation, and conduct normality tests.
+- **Hypothesis Testing**: Perform hypothesis testing using T-Tests and Chi-Squared tests to validate assumptions about your data.
 - **Machine Learning**: Train a simple linear regression model and evaluate its performance.
 - **Data Visualization**: Create various charts (distribution plots, bar charts, box plots, scatter plots, histograms, pie charts) to explore your data visually.
 - **User Interaction**: Interact with the app through a command-line interface and leverage logging for better debugging and user awareness.
@@ -23,7 +24,7 @@ DataVista requires Python 3 and several libraries like `pandas`, `scikit-learn`,
 
 - **Comprehensive**: Offers all the essential tools for data analysis in one place.
 - **User-Friendly**: Easy to use with a command-line interface.
-- **Informative**: Provides insights through statistical analysis and visualizations.
+- **Informative**: Provides insights through statistical analysis, hypothesis testing, and visualizations.
 - **Efficient**: Saves time by automating data cleaning and preprocessing tasks.
 
 ## Conclusion
