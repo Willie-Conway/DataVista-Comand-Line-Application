@@ -16,7 +16,7 @@ The name `DataVista` reflects the application's mission to provide users with a 
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Why the name DataVista?](#why-the-name-datavista?)
+2. [Why the name DataVista?](#why-the-name-datavista)
 3. [Features](#features)
    - [Core Features](#core-features)
    - [User Interaction](#user-interaction)
