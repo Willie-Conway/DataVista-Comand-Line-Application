@@ -475,4 +475,70 @@ Clusters formed: [0 0 1 0 1 0 0 0 0 0]
 
 End of Walkthrough 5
 
+Here’s the sixth walkthrough based on the output you provided for the **Time Series Forecasting** task:
+
+## Task 6: Time Series Forecasting
+
+### Step 1: Choose Option for Time Series Forecasting
+You begin by selecting the option to perform time series forecasting from the main menu:
+
+```markdown
+
+Available options:
+
+Perform Statistical Analysis
+Train Machine Learning Model
+Visualize Data
+Save Model
+Load Model
+View Loaded Model
+Perform Clustering
+Time Series Forecasting
+Exit
+
+Choose an option (1-9): 8
+
+```
+
+
+### Step 2: Specify Target Column
+You are prompted to enter the target column for forecasting. You choose to forecast the `price`:
+
+```markdown
+
+Enter the target column for time series forecasting: price
+
+```
+
+
+### Step 3: Enter ARIMA Order
+Next, you need to specify the ARIMA order as three integers (p, d, q). You enter the order as `1 1 1`:
+
+```markdown
+
+Enter ARIMA order as three integers (p, d, q) separated by space: 1 1 1
+
+```
+
+### Step 4: View Forecast Results
+The application performs the time series forecasting and provides the results:
+
+```markdown
+
+2024-10-22 23:09:04,300 - INFO - Time series forecast for price: 10 259.421787 11 256.698349 12 257.484744 13 257.257672 14 257.323239 Name: predicted_mean, dtype: float64
+
+```
+
+### Step 5: Summary of Forecast
+The forecasted values for the next periods are displayed:
+
+```markdown
+
+Forecast: 10 259.421787 11 256.698349 12 257.484744 13 257.257672 14 257.323239 Name: predicted_mean, dtype: float64
+
+```
+
+---
+
+End of Walkthrough 6
 
