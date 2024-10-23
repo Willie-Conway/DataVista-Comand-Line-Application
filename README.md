@@ -67,9 +67,18 @@ The name `DataVista` reflects the application's mission to provide users with a 
   - Confidence intervals
 - Conduct normality tests on specified columns.
 
+### Hypothesis Testing
+- Perform hypothesis testing using T-Tests and Chi-Squared tests to validate assumptions about your data.
+
 ### Machine Learning
 - Train a simple linear regression model using numeric columns as features and a user-defined target column.
 - Evaluate the model's performance using R² score.
+
+### Clustering
+- Implement clustering techniques such as K-Means to identify natural groupings within the data.
+
+### Time Series Forecasting
+- Perform time series analysis and forecasting using techniques like ARIMA or exponential smoothing.
 
 ### Visualization Options
 - **Distribution Plot**: Visualize the distribution of a specified numeric column.
@@ -98,11 +107,11 @@ The name `DataVista` reflects the application's mission to provide users with a 
 - **Programming Language**: Python
 - **Libraries**:
   - `pandas` for data manipulation
-  - `scikit-learn` for machine learning
+  - `scikit-learn` for machine learning and clustering
   - `matplotlib` and `seaborn` for data visualization
   - `numpy` for numerical operations
   - `colorama` for colored terminal output
-  - `statsmodels` for statistical modeling
+  - `statsmodels` for statistical modeling and time series analysis
   - `scipy` for scientific computing
   - `joblib` for model serialization
 
@@ -118,6 +127,7 @@ The name `DataVista` reflects the application's mission to provide users with a 
 
 - Python 3.x
 - Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`, `statsmodels`, `scipy`, `joblib`
+
 
 ## Installation
 
