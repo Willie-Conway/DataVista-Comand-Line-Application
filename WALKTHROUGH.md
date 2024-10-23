@@ -64,6 +64,13 @@ The **WALKTHROUGH.md** file serves as a comprehensive guide for users of the Dat
    - [Step 3: Confirmation of Save](#step-3-confirmation-of-save)
    - [End of Walkthrough 8](#end-of-walkthrough-8)
 
+9. [Task 9: Perform Hypothesis Testing](#task-9-perform-hypothesis-testing)
+   - [Step 1: Choose Option](#step-1-choose-option)
+   - [Step 2: Choose Test](#step-2-choose-test)
+   - [Step 3: Enter Column Names for T-Test](#step-3-enter-column-names-for-t-test)
+   - [Step 4: Enter Significance Level](#step-4-enter-significance-level)
+   - [Output](#output)
+   - [End of Walkthrough 9](#end-of-walkthrough-9)
 
 ---
 
@@ -178,7 +185,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 1
 
@@ -257,7 +265,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 2
 
@@ -311,7 +320,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 3
 
@@ -422,7 +432,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 5
 
@@ -463,7 +474,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 6
 
@@ -502,7 +514,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 7
 
@@ -560,7 +573,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 8
 
@@ -627,7 +641,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 9
 
@@ -674,7 +689,8 @@ Available options:
 6. View Loaded Model
 7. Perform Clustering
 8. Time Series Forecasting
-9. Exit
+9. Perform Hypothesis Testing
+10. Exit
 
 Choose an option (1-9): 4
 
@@ -701,4 +717,75 @@ The application confirms that the model has been successfully saved:
 
 End of Walkthrough 8
 
+## Task 9: Perform Hypothesis Testing
+
+### Step 1: Choose Option
+You start by selecting the option to perform hypothesis testing from the main menu:
+
+```markdown
+
+Available options:
+
+1. Perform Statistical Analysis
+2. Train Machine Learning Model
+3. Visualize Data
+4. Save Model
+5. Load Model
+6. View Loaded Model
+7. Perform Clustering
+8. Time Series Forecasting
+9. Perform Hypothesis Testing
+10. Exit
+
 The model saving task is complete.
+
+```
+
+### Step 2: Choose Test
+You are prompted to choose a test type. You select the T-Test:
+
+```markdown
+
+Choose a test:
+
+1. T-Test
+2. Chi-Squared Test
+
+Enter the number corresponding to your choice: 1
+
+T-Test Selected
+
+```
+
+### Step 3: Enter Column Names for T-Test
+You are asked to enter the first and second numeric column names for the T-Test. You choose `price` and `market_share`:
+
+```markdown
+
+Enter the first numeric column name for T-Test: price
+
+Enter the second numeric column name for T-Test: market_share
+
+```
+
+### Step 4: Enter Significance Level
+You specify the significance level for the test, defaulting to `0.05`:
+
+```markdown
+
+Enter significance level (default 0.05): 0.05
+
+```
+
+### Output
+The application displays the results of the T-Test:
+
+```markdown
+
+2024-10-23 03:02:28,938 - INFO - T-test results for 'price' and 'market_share':
+2024-10-23 03:02:28,939 - INFO - Statistic: 2.3031217001503737, P-value: 0.03341630467717743
+2024-10-23 03:02:28,939 - INFO - Reject the null hypothesis.
+
+```
+---
+End of Walkthrough 9
