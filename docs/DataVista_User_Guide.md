@@ -59,6 +59,7 @@ DataVista/
 │   ├── data_loader.py                    # Module for loading data
 │   ├── data_preprocessor.py              # Module for preprocessing data
 │   ├── data_vista.py                     # Main application file
+│   ├── hypothesis_testing.py              # Module for hypothesis testing tasks
 │   ├── machine_learning.py                # Module for machine learning tasks
 │   ├── model_generator.py                 # Module for generating and saving machine learning models
 │   ├── statistical_analysis.py            # Module for statistical analysis
@@ -213,33 +214,40 @@ The app is designed to provide user-friendly error messages. If you encounter is
 
 ## Data Flow Overview
 
-1. **Loading Data** :
+1. **Loading Data**:
+   - User provides a CSV file path.
+   - `load_data()` reads the file and populates `self.data`.
 
-* User provides a CSV file path.
-* `load_data()` reads the file and populates `self.data`.
+2. **Cleaning Data**:
+   - `clean_data()` processes `self.data` to remove duplicates and handle missing values.
 
-1. **Cleaning Data** :
+3. **Preprocessing Data**:
+   - `preprocess_data()` formats the data for analysis (e.g., date conversion).
 
-* `clean_data()` processes `self.data` to remove duplicates and handle missing values.
+4. **Statistical Analysis**:
+   - User selects a column for analysis.
+   - `statistical_analysis()` computes and logs various statistics.
 
-1. **Preprocessing Data** :
+5. **Hypothesis Testing**:
+   - User selects a hypothesis test type (e.g., T-Test, Chi-Squared).
+   - `perform_hypothesis_testing()` conducts the test and logs the results.
 
-* `preprocess_data()` formats the data for analysis (e.g., date conversion).
+6. **Machine Learning**:
+   - User specifies a target column.
+   - `machine_learning()` trains a model and logs the performance.
 
-1. **Statistical Analysis** :
+7. **Clustering**:
+   - User selects clustering parameters.
+   - `perform_clustering()` identifies natural groupings in the data and logs results.
 
-* User selects a column for analysis.
-* `statistical_analysis()` computes and logs various statistics.
+8. **Time Series Forecasting**:
+   - User selects a time series column and forecasting method.
+   - `perform_time_series_forecasting()` generates forecasts and logs findings.
 
-1. **Machine Learning** :
+9. **Data Visualization**:
+   - User selects a visualization type and column.
+   - `visualize_data()` generates and displays the chart.
 
-* User specifies a target column.
-* `machine_learning()` trains a model and logs the performance.
-
-1. **Data Visualization** :
-
-* User selects a visualization type and column.
-* `visualize_data()` generates and displays the chart.
 
 
 ## Feedback and Support
