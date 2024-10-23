@@ -375,20 +375,20 @@ Finally, you select a color palette for the chart, choosing `dark`:
 
 Choose a color palette:
 
-deep
-muted
-bright
-pastel
-dark
-colorblind
-cubehelix
-Set1
-Set2
-Set3
-RdBu
-viridis
-plasma
-cividis
+1. deep
+2. muted
+3. bright
+4. pastel
+5. dark
+6. colorblind
+7. cubehelix
+8. Set1
+9. Set2
+10. Set3
+11. RdBu
+12. viridis
+13. plasma
+14. cividis
 
 Enter your choice (1-14, or press Enter for default): 5
 
