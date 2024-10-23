@@ -200,7 +200,7 @@ class DataPreprocessor:
 ### Initialization (`__init__` method):
 The constructor initializes the class with a dataset and copies the original data for later use. It also prompts the user for options on scaling features and removing outliers.
 
-### User Options Methods:
+### User Options Methods (`ask_scale_option`, `ask_remove_outliers_option`):
 - **ask_scale_option**: Prompts the user to choose whether to scale features.
 - **ask_remove_outliers_option**: Prompts the user to choose whether to remove outliers.
 
