@@ -43,7 +43,7 @@ DataVista/
 │   └── walmart_grocery_data.csv        # Grocery data for analysis
 │
 ├── docs/
-│   └── User_Guide.md                   # User guide documentation
+│   └── DataVista_User_Guide.md                   # User guide documentation
 │
 ├── extra/
 │   └── image/
