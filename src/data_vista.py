@@ -17,6 +17,7 @@ logging.basicConfig(level=logging.INFO)
 class DataVista:
     def __init__(self):
         self.data = None
+        self.ml = None  # Initialize the MachineLearning class instance
 
     def load_data(self, file_path):
         loader = DataLoader(file_path)
@@ -46,15 +47,15 @@ class DataVista:
                 else:
                     raise ValueError("Logistic regression requires a binary target variable.")
 
-            ml = MachineLearning(self.data)
+            self.ml = MachineLearning(self.data)
             if self.data[target_column].dtype in ['float64', 'int64']:
                 if algorithm in ['linear_regression', 'decision_tree']:
-                    ml.linear_regression(target_column)
+                    self.ml.linear_regression(target_column)
                 else:
                     logging.error(Fore.RED + "Invalid algorithm selected for regression." + Fore.RESET)
             elif self.data[target_column].dtype in ['int64', 'float64'] and self.data[target_column].nunique() == 2:
                 if algorithm in ['logistic_regression', 'decision_tree']:
-                    ml.classification(target_column, algorithm)
+                    self.ml.classification(target_column, algorithm)
                 else:
                     logging.error(Fore.RED + "Invalid algorithm selected for classification." + Fore.RESET)
             else:
@@ -131,20 +132,20 @@ def main():
                 chart_choice = input(Fore.BLUE + "\nEnter the chart type (1-8): " + Fore.RESET)
                 app.visualize_data(valid_columns, chart_choice)
             elif choice == '4':
-                filename = input(Fore.BLUE + "\nEnter filename to save the model: " + Fore.RESET)
-                ml = MachineLearning(app.data)
-                ml.save_model(filename)
+                if app.ml is None or app.ml.model is None:
+                    logging.error(Fore.RED + "No model trained to save." + Fore.RESET)
+                else:
+                    filename = input(Fore.BLUE + "\nEnter filename to save the model: " + Fore.RESET)
+                    app.ml.save_model(filename)
             elif choice == '5':
                 filename = input(Fore.BLUE + "\nEnter filename to load the model: " + Fore.RESET)
-                ml = MachineLearning(app.data)
-                ml.load_model(filename)
+                app.ml.load_model(filename)
             elif choice == '6':
-                ml.view_model()
+                app.ml.view_model()
             elif choice == '7':
                 try:
                     n_clusters = int(input(Fore.BLUE + "\nEnter the number of clusters for K-means: " + Fore.RESET))
-                    ml = MachineLearning(app.data)
-                    clusters = ml.clustering(n_clusters)
+                    clusters = app.ml.clustering(n_clusters)
                     print(Fore.GREEN + f"Clusters formed: {clusters}" + Fore.RESET)
                 except ValueError:
                     logging.error(Fore.RED + "Please enter a valid integer for the number of clusters." + Fore.RESET)
@@ -153,8 +154,7 @@ def main():
                 order = input(Fore.BLUE + "Enter ARIMA order as three integers (p, d, q) separated by space: " + Fore.RESET).split()
                 try:
                     order = tuple(map(int, order))
-                    ml = MachineLearning(app.data)
-                    forecast = ml.time_series(target_column, order)
+                    forecast = app.ml.time_series(target_column, order)
                     print(Fore.GREEN + f"Forecast: {forecast}" + Fore.RESET)
                 except ValueError:
                     logging.error(Fore.RED + "Invalid ARIMA order format. Please enter three integers." + Fore.RESET)
