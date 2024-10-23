@@ -12,7 +12,7 @@ The name `DataVista` reflects the application's mission to provide users with a 
 
 ## DataVista Documentation
 
-## Table of Contents
+### Table of Contents
 
 1. [Overview](#overview)
 2. [Why the name DataVista?](#why-the-name-datavista)
