@@ -6,6 +6,7 @@ from data_preprocessor import DataPreprocessor
 from statistical_analysis import StatisticalAnalysis
 from machine_learning import MachineLearning
 from visualization import Visualization
+from hypothesis_testing import HypothesisTesting  # Import the new module
 from colorama import Fore
 
 # Define the app version
@@ -69,6 +70,32 @@ class DataVista:
         visualizer = Visualization(self.data)
         visualizer.visualize(columns, chart_type)
 
+    def hypothesis_testing(self):
+        print(Fore.BLUE + "\nChoose a test:\n" + Fore.RESET)
+        print("1. T-Test")
+        print("2. Chi-Squared Test\n")
+        
+        test_type = input(Fore.BLUE + "Enter the number corresponding to your choice: " + Fore.RESET)
+
+        if test_type == '1':
+            print(Fore.GREEN + "\nT-Test Selected\n" + Fore.RESET)
+            column1 = input(Fore.BLUE + "\nEnter the first numeric column name for T-Test: " + Fore.RESET)
+            column2 = input(Fore.BLUE + "\nEnter the second numeric column name for T-Test: " + Fore.RESET)
+            alpha = float(input(Fore.BLUE + "\nEnter significance level (default 0.05): " + Fore.RESET) or 0.05)
+            tester = HypothesisTesting(self.data)
+            tester.t_test(column1, column2, alpha)
+
+        elif test_type == '2':
+            print(Fore.GREEN + "\nChi-Squared Test Selected\n" + Fore.RESET)
+            column1 = input(Fore.BLUE + "\nEnter the first categorical column name for Chi-Squared Test: " + Fore.RESET)
+            column2 = input(Fore.BLUE + "\nEnter the second categorical column name for Chi-Squared Test: " + Fore.RESET)
+            alpha = float(input(Fore.BLUE + "\nEnter significance level (default 0.05): " + Fore.RESET) or 0.05)
+            tester = HypothesisTesting(self.data)
+            tester.chi_squared_test(column1, column2, alpha)
+
+        else:
+            logging.error(Fore.RED + "Invalid choice. Please select a valid test type." + Fore.RESET)
+
 def main():
     print(Fore.BLUE + f"\nWelcome to " + Fore.WHITE + "DataVista " + Fore.GREEN + "v" + APP_VERSION + Fore.RESET + "!" + Fore.RESET)
     print(Fore.BLUE + "Your companion for data analysis and visualization.\n" + Fore.RESET)
@@ -94,9 +121,10 @@ def main():
             print("6. View Loaded Model")
             print("7. Perform Clustering")
             print("8. Time Series Forecasting")
-            print("9. Exit")
+            print("9. Perform Hypothesis Testing")  # New option added
+            print("10. Exit")
             
-            choice = input(Fore.BLUE + "\nChoose an option (1-9): " + Fore.RESET)
+            choice = input(Fore.BLUE + "\nChoose an option (1-10): " + Fore.RESET)
             
             if choice == '1':
                 app.statistical_analysis()
@@ -159,11 +187,13 @@ def main():
                 except ValueError:
                     logging.error(Fore.RED + "Invalid ARIMA order format. Please enter three integers." + Fore.RESET)
             elif choice == '9':
+                app.hypothesis_testing()
+            elif choice == '10':
                 if input(Fore.YELLOW + "\nAre you sure you want to exit? (y/n): " + Fore.RESET).lower() == 'y':
                     logging.info(Fore.BLUE + "Thanks for using " + Fore.WHITE + "DataVista" + "." + Fore.RESET + " Goodbye!" + Fore.BLUE)
                     break
             else:
-                logging.error(Fore.RED + "Invalid choice. Please enter a number between 1 and 9." + Fore.RED)
+                logging.error(Fore.RED + "Invalid choice. Please enter a number between 1 and 10." + Fore.RED)
 
     except Exception as e:
         logging.error(Fore.RED + f"An error occurred: {str(e)}" + Fore.RESET)
