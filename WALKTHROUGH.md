@@ -657,9 +657,9 @@ End of Walkthrough 7
 
 Here’s the eighth walkthrough based on the output you provided for the **Save Model** task:
 
-Task 8: Save Model
+## Task 8: Save Model
 
-Step 1: Choose Option to Save Model
+### Step 1: Choose Option to Save Model
 You start by selecting the option to save the trained machine learning model from the main menu:
 
 ```markdown
@@ -679,7 +679,7 @@ Available options:
 Choose an option (1-9): 4
 
 ```
-Step 2: Enter Filename to Save the Model
+### Step 2: Enter Filename to Save the Model
 You are prompted to enter a filename to save the model. You choose to save it as `models/decision_tree_model.joblib:`
 
 ```markdown
@@ -688,7 +688,7 @@ Enter filename to save the model: models/decision_tree_model.joblib
 
 ```
 
-Step 3: Confirmation of Save
+### Step 3: Confirmation of Save
 The application confirms that the model has been successfully saved:
 
 ```markdown
