@@ -12,6 +12,14 @@
    - [Filling Missing Values](#filling-missing-values)
    - [Final Summary](#final-summary)
    - [Return Value](#return-value)
+4. [Explanation of Components in the DataCleaner Class](#explanation-of-components-in-the-datacleaner-class)
+   - [Data Types](#1-data-types)
+   - [Condition Statements](#2-condition-statements)
+   - [Variables](#3-variables)
+   - [Statements](#4-statements)
+   - [Objects](#5-objects)
+   - [User Input Handling](#6-user-input-handling)
+5. [Summary](#summary)
 
 ## Purpose of the File
 
@@ -153,3 +161,55 @@ class DataCleaner:
 ### Return Value:
 - The cleaned dataset is returned for further analysis or use.
 
+# Explanation of Components in the DataCleaner Class
+
+## 1. Data Types
+- **`pd.DataFrame`**: 
+  - Used to store the dataset. It is a two-dimensional, size-mutable, and potentially heterogeneous tabular data structure with labeled axes (rows and columns). This structure allows for efficient data manipulation, which is essential in data cleaning tasks.
+
+## 2. Condition Statements
+- **`if self.data is None:`**
+  - Checks if the dataset has been loaded. If not, it logs an error and exits the cleaning process. This prevents any operations on a nonexistent dataset.
+  
+- **`if action == '1':`**, **`elif action == '2':`**, etc.
+  - These conditional statements direct the flow of execution based on user input. They allow for different paths to handle user choices regarding missing data.
+
+## 3. Variables
+- **`self.data`**:
+  - An instance variable that holds the dataset being processed. It is initialized in the constructor (`__init__` method) and is used throughout the class.
+
+- **`initial_shape`**:
+  - Stores the shape of the dataset before any cleaning operations. It is a tuple representing the number of rows and columns, which is useful for logging changes after cleaning.
+
+- **`total_rows_initial` and `total_rows_final`**:
+  - These variables track the number of rows before and after the cleaning process. They are essential for summarizing how many rows were removed or modified.
+
+- **`total_rows_filled`**:
+  - Counts how many rows have been filled after missing value handling. This helps provide feedback on the data cleaning process.
+
+## 4. Statements
+- **`self.data.drop_duplicates(inplace=True)`**:
+  - A method from the pandas library that removes duplicate rows from the DataFrame. The `inplace=True` argument modifies the original DataFrame instead of returning a new one.
+
+- **`self.data.dropna(inplace=True)`**:
+  - Drops any rows with missing values from the DataFrame, effectively cleaning the dataset.
+
+- **`self.data[col].fillna(...)`**:
+  - This method fills missing values in a specific column with a specified value (mean, mode, etc.). It's part of pandas and allows for flexible data imputation strategies.
+
+## 5. Objects
+- **`logging`**:
+  - An object from the Python `logging` module that provides a flexible framework for emitting log messages. It's used here to log information about the cleaning process, errors, and user actions, facilitating debugging and transparency.
+
+- **`Fore`**:
+  - An object from the `colorama` library used to change the text color in terminal output. It enhances user experience by visually distinguishing different types of messages (e.g., errors, information).
+
+## 6. User Input Handling
+- **`input()`**:
+  - A built-in Python function that allows for user interaction. It is used to gather the user's choice on how to handle missing values and confirm actions.
+
+- **`while True:`**:
+  - A loop that continues until a break statement is executed. It is used to repeatedly prompt the user for input until a valid action is taken.
+
+## Summary
+In summary, the `DataCleaner` class effectively utilizes various data types, condition statements, variables, and methods to create an interactive and user-friendly tool for cleaning datasets. The structure allows for flexible handling of different data cleaning scenarios while maintaining a clear log of actions for accountability and debugging. This combination of components makes the class a practical asset for data scientists and analysts.
