@@ -1,4 +1,3 @@
-
 # DataVista: Your One-Stop Shop for Data Analysis
 
 ![DataVista](https://tinypic.host/images/2024/10/23/DataVistaLogo6.png)
@@ -12,13 +11,15 @@
 - **Statistical Analysis**: Summarize data with metrics like mean, median, standard deviation, and conduct normality tests.
 - **Hypothesis Testing**: Perform hypothesis testing using T-Tests and Chi-Squared tests to validate assumptions about your data.
 - **Machine Learning**: Train a simple linear regression model and evaluate its performance.
+- **Clustering**: Implement clustering algorithms to identify patterns and group similar data points.
+- **Time Series Forecasting**: Analyze time-dependent data and make forecasts using appropriate techniques.
 - **Data Visualization**: Create various charts (distribution plots, bar charts, box plots, scatter plots, histograms, pie charts) to explore your data visually.
 - **User Interaction**: Interact with the app through a command-line interface and leverage logging for better debugging and user awareness.
 - **Error Handling**: Handles common errors like missing files, empty datasets, and invalid user input.
 
 ## Getting Started
 
-DataVista requires Python 3 and several libraries like `pandas`, `scikit-learn`, `matplotlib`, `seaborn`,`colorama` and `numpy`, `statsmodelset`, `scipy`, `joblib`. Installation instructions and a usage guide are available in the project documentation.
+DataVista requires Python 3 and several libraries like `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `colorama`, `numpy`, `statsmodels`, `scipy`, and `joblib`. Installation instructions and a usage guide are available in the project documentation.
 
 ## Benefits
 
