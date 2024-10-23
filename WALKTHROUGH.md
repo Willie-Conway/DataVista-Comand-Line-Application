@@ -1,7 +1,7 @@
 # WALKTHROUGH.md
 ![DataVista](https://tinypic.host/images/2024/10/23/DataVistaWalkthrough.png)
 
-The **WALKTHROUGH.md** file serves as a comprehensive guide for users of the DataVista application. It documents step-by-step processes for various tasks, such as performing statistical analysis, training machine learning models, visualizing data, saving and loading models, performing clustering, and conducting time series forecasting. Each task includes clear instructions, user inputs, and expected outputs, making it easier for users to navigate the application and understand its functionalities. This structured approach enhances usability and facilitates learning for both new and experienced users.
+The **WALKTHROUGH.md** file serves as a comprehensive guide for users of the DataVista application. It documents step-by-step processes for various tasks, such as performing statistical analysis, training machine learning models, visualizing data, saving and loading models, performing clustering, conducting time series forecasting, and performing hypothesis testing. Each task includes clear instructions, user inputs, and expected outputs, making it easier for users to navigate the application and understand its functionalities. This structured approach enhances usability and facilitates learning for both new and experienced users.
 
 ## Table of Contents
 
