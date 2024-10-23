@@ -417,3 +417,62 @@ You receive information about the loaded model, including its type, parameters, 
 
 End of Walkthrough 4
 
+Here’s the fifth walkthrough based on the output you provided for the **Perform Clustering** task:
+
+## Task 5: Perform Clustering
+
+### Step 1: Choose Option to Perform Clustering
+You start by selecting the option to perform clustering from the main menu:
+
+```markdown
+
+Available options:
+
+Perform Statistical Analysis
+Train Machine Learning Model
+Visualize Data
+Save Model
+Load Model
+View Loaded Model
+Perform Clustering
+Time Series Forecasting
+Exit
+
+Choose an option (1-9): 7
+
+```
+
+### Step 2: Enter Number of Clusters
+You are prompted to enter the number of clusters for the K-means algorithm. You choose to create 2 clusters:
+
+```markdown
+
+Enter the number of clusters for K-means: 2
+
+```
+
+
+### Step 3: Confirmation of Clustering
+After performing the clustering operation, you receive a confirmation message indicating that K-means clustering was successfully performed:
+
+```markdown
+
+2024-10-22 23:02:39,646 - INFO - K-Means clustering performed with 2 clusters.
+
+```
+
+### Step 4: View Clusters Formed
+You also receive information about the clusters formed:
+
+```markdown
+
+Clusters formed: [0 0 1 0 1 0 0 0 0 0]
+
+```
+
+
+---
+
+End of Walkthrough 5
+
+
