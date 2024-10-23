@@ -6,7 +6,16 @@
 
 **DataVista** is a Python application designed to assist data analysts and scientists in making informed decisions using existing data. The app integrates functionalities for data loading, cleaning, preprocessing, statistical analysis, machine learning, and visualization, making it a comprehensive tool for data analysis.
 
-# DataVista Documentation
+## Why the name **DataVista*?
+
+The name `DataVista` reflects the application's mission to provide users with a clear and comprehensive view of their data. `Data` signifies the core focus of the application—working with datasets—while `Vista` suggests a broad perspective or insight. Together, the name conveys the idea of empowering users to explore, analyze, and understand their data more effectively, helping them make informed decisions based on meaningful insights.
+
+
+
+You said:
+
+
+## DataVista Documentation
 
 ## Table of Contents
 
