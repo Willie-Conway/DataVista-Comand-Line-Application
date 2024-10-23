@@ -1,4 +1,6 @@
 # WALKTHROUGH.md
+![DataVista](https://tinypic.host/images/2024/10/23/DataVistaWalkthrough.png)
+
  Here's the first walkthrough based on the output you provided for the **Perform Statistical Analysis** task:
   
 ## Task 1: Perform Statistical Analysis
