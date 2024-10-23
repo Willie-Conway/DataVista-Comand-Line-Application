@@ -29,7 +29,7 @@ The **DataVista User Guide** provides comprehensive instructions for users on ho
 
 ## Project Structure
 
-```python
+```markdown
 DataVista/
 │
 ├── .github/
