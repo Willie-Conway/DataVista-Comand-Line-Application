@@ -137,10 +137,12 @@ class MachineLearning:
     def linear_regression(self, target_column):
         lr_model = LinearRegressionModel(self.data)
         lr_model.train(target_column)
+        self.model = lr_model.model  # Store the trained model
 
     def classification(self, target_column, algorithm='logistic_regression'):
         clf_model = ClassificationModels(self.data)
         clf_model.train(target_column, algorithm)
+        self.model = clf_model.model  # Store the trained model
 
     def clustering(self, n_clusters):
         cluster_model = ClusterAnalysis(self.data)
