@@ -71,7 +71,8 @@ DataVista/
 ├── CONTRIBUTING.md                        # Instructions for contributing to the project
 ├── LICENSE                                # License information for the project
 ├── README.md                              # Overview of the project
-├── Summary.md                             # Summary of the project or key features
+├── SUMMARYy.md                             # Summary of the project or key features
+├── WALKTHROUGH.md                        # Walkthrough of the project or key features
 ├── data_vista_info.sh                    # Script for additional info or setup
 └── requirements.txt                      # List of required Python packages
 
