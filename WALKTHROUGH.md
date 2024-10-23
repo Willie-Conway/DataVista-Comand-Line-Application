@@ -166,3 +166,55 @@ price          -0.122013  1.000000      0.740616
 market_share   -0.046655  0.740616      1.000000
 
 ```
+
+End of Walkthrough - 1
+
+
+Here’s the second walkthrough based on the output you provided for the **Train Machine Learning Model** task:
+
+## Task 2: Train Machine Learning Model
+
+### Step 1: Choose Option
+You select the option to train a machine learning model from the main menu:
+
+```markdown
+
+Available options:
+
+Perform Statistical Analysis
+Train Machine Learning Model
+Visualize Data
+Save Model
+Load Model
+View Loaded Model
+Perform Clustering
+Time Series Forecasting
+Exit
+Choose an option (1-9): 2
+
+```
+
+
+### Step 2: Enter Target Column
+You are prompted to enter the target column name for machine learning. You choose `price`:
+
+```markdown
+
+Enter the target column name for machine learning: price
+
+```
+
+
+### Step 3: Choose Algorithm
+Next, you select the algorithm for training the model. You opt for `linear_regression`:
+
+### Output
+The application provides feedback on the training process:
+
+```markdown
+
+Choose an algorithm (linear_regression, decision_tree, logistic_regression): linear_regression
+2024-10-22 20:01:41,300 - INFO - Model trained with MSE: 41223.787761441214, R^2: -10.45105215595589
+
+```
+
