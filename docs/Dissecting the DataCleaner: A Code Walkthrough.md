@@ -211,5 +211,5 @@ class DataCleaner:
 - **`while True:`**:
   - A loop that continues until a break statement is executed. It is used to repeatedly prompt the user for input until a valid action is taken.
 
-### Summary
+## Summary
 In summary, the `DataCleaner` class effectively utilizes various data types, condition statements, variables, and methods to create an interactive and user-friendly tool for cleaning datasets. The structure allows for flexible handling of different data cleaning scenarios while maintaining a clear log of actions for accountability and debugging. This combination of components makes the class a practical asset for data scientists and analysts.
