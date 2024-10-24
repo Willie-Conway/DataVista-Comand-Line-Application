@@ -186,7 +186,7 @@ class DataPreprocessor:
 
 ```
 
-# Walkthrough Breakdown
+## Walkthrough Breakdown
 
 ### Imports:
 - **pandas**: Imported for data manipulation and handling.
