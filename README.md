@@ -1,4 +1,4 @@
-# 📊DataVista
+# DataVista
 
 ![DataVista](https://tinypic.host/images/2024/10/23/DataVistaLogo5.png)
 
