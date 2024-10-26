@@ -35,7 +35,7 @@ The name `DataVista` reflects the application's mission to provide users with a 
 10. [License](#license)
 11. [Conclusion](#conclusion)
 
-## Features
+## ⚙️Features
 
 ### ⚙️Core Features
 
