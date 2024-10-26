@@ -6,13 +6,13 @@
 
 **DataVista** is a Python application designed to assist data analysts and scientists in making informed decisions using existing data. The app integrates functionalities for data loading, cleaning, preprocessing, statistical analysis, machine learning, hypothesis testing and visualization, making it a comprehensive tool for data analysis.
 
-## Why the name DataVista?
+## ☁️Why the name DataVista?
 
 The name `DataVista` reflects the application's mission to provide users with a clear and comprehensive view of their data. `Data` signifies the core focus of the application—working with datasets—while `Vista` suggests a broad perspective or insight. Together, the name conveys the idea of empowering users to explore, analyze, and understand their data more effectively, helping them make informed decisions based on meaningful insights.
 
-## DataVista Documentation
+## 📂DataVista Documentation
 
-### Table of Contents
+### 📖Table of Contents
 
 1. [Overview](#overview)
 2. [Why the name DataVista?](#why-the-name-datavista)
@@ -37,7 +37,7 @@ The name `DataVista` reflects the application's mission to provide users with a 
 
 ## Features
 
-### Core Features
+### ⚙️Core Features
 
 - **Data Loading**:
   - Load data from CSV, JSON, and Excel files into a pandas DataFrame.
@@ -53,10 +53,10 @@ The name `DataVista` reflects the application's mission to provide users with a 
 - **Data Splitting**:
   - Split the dataset into training and testing sets based on a specified target column.
 
-### Data Wrangling
+### 🪢Data Wrangling
 - Perform data cleaning to ensure data integrity and quality.
 
-### Statistical Analysis
+### 🧮Statistical Analysis
 - Provide a statistical summary of numerical columns, including:
   - Mean
   - Median
@@ -67,20 +67,20 @@ The name `DataVista` reflects the application's mission to provide users with a 
   - Confidence intervals
 - Conduct normality tests on specified columns.
 
-### Hypothesis Testing
+### 🧪Hypothesis Testing
 - Perform hypothesis testing using T-Tests and Chi-Squared tests to validate assumptions about your data.
 
-### Machine Learning
+### 🦾Machine Learning
 - Train a simple linear regression model using numeric columns as features and a user-defined target column.
 - Evaluate the model's performance using R² score.
 
-### Clustering
+### 📈Clustering
 - Implement clustering techniques such as K-Means to identify natural groupings within the data.
 
-### Time Series Forecasting
+### ⏱️Time Series Forecasting
 - Perform time series analysis and forecasting using techniques like ARIMA or exponential smoothing.
 
-### Visualization Options
+### 📊Visualization Options
 - **Distribution Plot**: Visualize the distribution of a specified numeric column.
 - **Bar Chart**: Create a bar chart for categorical data.
 - **Box Plot**: Visualize the distribution of a numerical column grouped by a categorical column.
@@ -89,20 +89,20 @@ The name `DataVista` reflects the application's mission to provide users with a 
 - **Histogram**: Display a histogram for the distribution of a specified numeric column.
 - **Pie Chart**: Create a pie chart for a specified categorical column.
 
-### User Interaction
+### 👥User Interaction
 - **Command-Line Interface**: Allow users to input choices for visualization types and target columns interactively.
 - **Logging**: Provide logging for successful operations, warnings, and errors for better debugging and user awareness.
 
-### Error Handling
+### 🛑Error Handling
 - Handle various errors, such as:
   - File not found.
   - Empty datasets.
   - Invalid column names for visualizations.
 
-### Default Settings
+### 👤Default Settings
 - Load a default dataset if no file path is provided.
 
-## Tech Stack
+## ⚙️Tech Stack
 
 - **Programming Language**: Python
 - **Libraries**:
@@ -115,7 +115,7 @@ The name `DataVista` reflects the application's mission to provide users with a 
   - `scipy` for scientific computing
   - `joblib` for model serialization
 
-## Data Storage
+## 🛢️Data Storage
 
 - **Input Data**: The application accepts data files in CSV, JSON, and Excel formats, which can be loaded into pandas DataFrames for processing.
 - **Temporary Storage**: Cleaned and preprocessed data is maintained in memory for immediate analysis and visualization.
@@ -123,13 +123,13 @@ The name `DataVista` reflects the application's mission to provide users with a 
 
 ## Getting Started
 
-### Prerequisites
+### 📚Prerequisites
 
 - Python 3.x
 - Required libraries: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `numpy`, `colorama`, `statsmodels`, `scipy`, `joblib`
 
 
-## Installation
+## Installation🔃
 
 1. Clone the repository:
    ```bash
@@ -145,7 +145,7 @@ Make sure you have Python 3 installed. Install the required packages using:
 pip install -r requirements.txt
 ```
 
-## Usage
+## 👨🏿‍💻Usage
 
 1. Place your CSV file in the  `data/`  directory.
 2. Run the app:
@@ -165,7 +165,7 @@ python src/data_vista.py --data data/your_specific_file.csv
 
 ```
 
-## Testing
+## 👨🏿‍💻Testing
 
 To run the tests, use:
 
@@ -174,7 +174,7 @@ python -m unittest discover -s tests
 
 ```
 
-## Sample Unit Tests
+## 🔌Sample Unit Tests
 
 You can create a `tests/test_data_vista.py` file with the following content:
 
@@ -236,7 +236,7 @@ if __name__ == '__main__':
 
 ```
 
-## Example Dataset
+## 📅Example Dataset
 
 The app includes a sample  dataset located as `data/sample_data.csv` for testing.
 
