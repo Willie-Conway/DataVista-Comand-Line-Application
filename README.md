@@ -137,7 +137,7 @@ The name `DataVista` reflects the application's mission to provide users with a 
    cd DataVista
    ```
 
-## Requirements
+## 📚Requirements
 
 Make sure you have Python 3 installed. Install the required packages using:
 
@@ -236,7 +236,7 @@ if __name__ == '__main__':
 
 ```
 
-## 📅Example Dataset
+## 📄Example Dataset
 
 The app includes a sample  dataset located as `data/sample_data.csv` for testing.
 
@@ -259,7 +259,7 @@ python src/data_vista.py
 
 ## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the [MIT License](LICENSE).
 
 ### Summary of Sections
 
