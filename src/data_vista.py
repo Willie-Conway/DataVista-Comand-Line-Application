@@ -6,7 +6,7 @@ from data_preprocessor import DataPreprocessor
 from statistical_analysis import StatisticalAnalysis
 from machine_learning import MachineLearning
 from visualization import Visualization
-from hypothesis_testing import HypothesisTesting  # Import the new module
+from hypothesis_testing import HypothesisTesting
 from colorama import Fore
 
 # Define the app version
@@ -40,22 +40,21 @@ class DataVista:
         try:
             if target_column not in self.data.columns:
                 raise KeyError(f"Target column '{target_column}' not found in the dataset.")
-
             # Validate and prepare target column for machine learning
             if self.data[target_column].dtype == 'object' or self.data[target_column].dtype.name == 'category':
                 if self.data[target_column].nunique() == 2:
-                    self.data[target_column] = self.data[target_column].cat.codes  # Convert to numeric
+                    self.data[target_column] = self.data[target_column].cat.codes
                 else:
                     raise ValueError("Logistic regression requires a binary target variable.")
 
             self.ml = MachineLearning(self.data)
             if self.data[target_column].dtype in ['float64', 'int64']:
-                if algorithm in ['linear_regression', 'decision_tree']:
+                if algorithm in ['Linear Regression', 'Decision Tree']:
                     self.ml.linear_regression(target_column)
                 else:
                     logging.error(Fore.RED + "Invalid algorithm selected for regression." + Fore.RESET)
             elif self.data[target_column].dtype in ['int64', 'float64'] and self.data[target_column].nunique() == 2:
-                if algorithm in ['logistic_regression', 'decision_tree']:
+                if algorithm in ['Logistic Regression', 'Decision Tree']:
                     self.ml.classification(target_column, algorithm)
                 else:
                     logging.error(Fore.RED + "Invalid algorithm selected for classification." + Fore.RESET)
@@ -121,7 +120,7 @@ def main():
             print("6. View Loaded Model")
             print("7. Perform Clustering")
             print("8. Time Series Forecasting")
-            print("9. Perform Hypothesis Testing")  # New option added
+            print("9. Perform Hypothesis Testing")
             print("10. Exit")
             
             choice = input(Fore.BLUE + "\nChoose an option (1-10): " + Fore.RESET)
@@ -130,8 +129,25 @@ def main():
                 app.statistical_analysis()
             elif choice == '2':
                 target_column = input(Fore.BLUE + "\nEnter the target column name for machine learning: " + Fore.RESET)
-                algorithm = input(Fore.BLUE + "\nChoose an algorithm (linear_regression, decision_tree, logistic_regression): " + Fore.RESET)
-                app.machine_learning(target_column, algorithm)
+                
+                # Algorithm Selection Menu
+                print(Fore.BLUE + "\nChoose an algorithm:\n" + Fore.RESET)
+                algorithm_options = {
+                    "1": "Linear Regression",
+                    "2": "Decision Tree",
+                    "3": "Logistic Regression"
+                }
+                
+                for key, value in algorithm_options.items():
+                    print(f"{key}. {value}")
+                    
+                algorithm_choice = input(Fore.BLUE + "\nEnter the number corresponding to your choice: " + Fore.RESET)
+                
+                if algorithm_choice in algorithm_options:
+                    algorithm = algorithm_options[algorithm_choice]
+                    app.machine_learning(target_column, algorithm)
+                else:
+                    logging.error(Fore.RED + "Invalid choice. Please select a valid algorithm." + Fore.RESET)
             elif choice == '3':
                 feature_columns = input(Fore.BLUE + "\nEnter feature column names to visualize (comma-separated): " + Fore.RESET).split(',')
                 feature_columns = [col.strip() for col in feature_columns]
@@ -190,7 +206,7 @@ def main():
                 app.hypothesis_testing()
             elif choice == '10':
                 if input(Fore.YELLOW + "\nAre you sure you want to exit? (y/n): " + Fore.RESET).lower() == 'y':
-                    logging.info(Fore.BLUE + "Thanks for using " + Fore.WHITE + "DataVista" + "." + Fore.RESET + " Goodbye!" + Fore.BLUE)
+                    logging.info(Fore.BLUE + "Thanks for using " + Fore.WHITE + "DataVista" + "." + Fore.RESET + Fore.BLUE + " Goodbye!" + Fore.RESET)
                     break
             else:
                 logging.error(Fore.RED + "Invalid choice. Please enter a number between 1 and 10." + Fore.RED)
