@@ -1,5 +1,5 @@
 # DataVista User Guide
-![DataVista User Guide](https://tinypic.host/images/2024/10/21/DataVistaUserGuide.png)
+![DataVista User Guide](https://github.com/Willie-Conway/DataVista-App/blob/62b22806b37009186f100531f50769ed98517397/assets/DataVista.png)
 
 The **DataVista User Guide** provides comprehensive instructions for users on how to install, use, and navigate the DataVista application. It details the project structure, installation steps, data handling procedures, and visualization options, ensuring that both new and experienced users can effectively utilize the tool for data analysis. The guide also includes troubleshooting tips and a section for feedback, fostering an engaging user experience.
 
