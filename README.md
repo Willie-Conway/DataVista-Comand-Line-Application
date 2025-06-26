@@ -1,6 +1,6 @@
 # DataVista
 
-![DataVista](https://tinypic.host/images/2024/10/23/DataVistaLogo5.png)
+![DataVista](https://github.com/Willie-Conway/DataVista-App/blob/62b22806b37009186f100531f50769ed98517397/assets/DataVista.png)
 
 ## Overview
 
