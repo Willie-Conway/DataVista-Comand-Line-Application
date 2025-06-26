@@ -1,6 +1,6 @@
 # DataVista: Your One-Stop Shop for Data Analysis
 
-![DataVista](https://tinypic.host/images/2024/10/23/DataVistaLogo6.png)
+![DataVista](https://github.com/Willie-Conway/DataVista-App/blob/62b22806b37009186f100531f50769ed98517397/assets/DataVista.png)
 
 **DataVista** is a Python application designed to streamline the data analysis workflow for analysts and scientists. It offers a comprehensive suite of features, making it a valuable tool for anyone working with data.
 
