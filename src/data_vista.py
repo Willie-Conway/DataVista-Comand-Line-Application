@@ -37,11 +37,15 @@ class DataVista:
         analysis = StatisticalAnalysis(self.data)
         analysis.perform_analysis()
 
-    def machine_learning(self, target_column, algorithm='Linear Regression'):
+    def machine_learning(self, target_column, algorithm='linear_regression'):
         try:
             if target_column not in self.data.columns:
                 raise KeyError(f"Target column '{target_column}' not found in the dataset.")
-            # Handle categorical target for classification
+
+            # Normalize algorithm string for consistent comparison
+            algorithm = algorithm.lower().replace(' ', '_')
+
+            # Convert categorical binary target to numeric codes if needed
             if self.data[target_column].dtype == 'object' or self.data[target_column].dtype.name == 'category':
                 if self.data[target_column].nunique() == 2:
                     self.data[target_column] = self.data[target_column].cat.codes
@@ -50,13 +54,12 @@ class DataVista:
 
             self.ml = MachineLearning(self.data)
 
-            # Check if target is numeric
+            # Check if target is numeric for regression
             if self.data[target_column].dtype in ['float64', 'int64']:
-                # Regression algorithms (only Linear Regression implemented so far)
-                if algorithm == 'Linear Regression':
+                # Regression algorithms
+                if algorithm == 'linear_regression':
                     self.ml.linear_regression(target_column)
-                elif algorithm == 'Decision Tree':
-                    # You need to implement decision tree regression or skip
+                elif algorithm == 'decision_tree':
                     logging.error(Fore.RED + "Decision Tree regression not implemented." + Fore.RESET)
                     return None
                 else:
@@ -65,10 +68,8 @@ class DataVista:
             else:
                 # For classification, only if target is binary numeric
                 if self.data[target_column].nunique() == 2:
-                    if algorithm in ['Logistic Regression', 'Decision Tree']:
-                        # Convert to expected algorithm string for ML class
-                        algo_str = algorithm.lower().replace(' ', '_')
-                        self.ml.classification(target_column, algo_str)
+                    if algorithm in ['logistic_regression', 'decision_tree']:
+                        self.ml.classification(target_column, algorithm)
                     else:
                         logging.error(Fore.RED + "Invalid algorithm selected for classification." + Fore.RESET)
                         return None
