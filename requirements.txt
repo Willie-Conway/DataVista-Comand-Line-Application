@@ -5,6 +5,6 @@ scikit-learn
 seaborn
 matplotlib
 colorama
-statsmodelset
+statsmodels
 scipy
 joblib
