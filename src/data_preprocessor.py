@@ -4,34 +4,22 @@ from sklearn.preprocessing import StandardScaler
 from colorama import Fore
 
 class DataPreprocessor:
-    def __init__(self, data, scale_choice=None, outlier_choice=None, fill_methods=None):
-        """
-        Args:
-            data (pd.DataFrame): The input dataset.
-            scale_choice (str, optional): '1' to scale features, '2' to skip scaling.
-            outlier_choice (str, optional): '1' to remove outliers, '2' to keep.
-            fill_methods (dict, optional): Dict mapping column names to fill strategy codes ('1'-'5').
-        """
+    def __init__(self, data):
         self.original_data = data.copy()  # Keep a copy of the original data
         self.data = data
-        self.scale_features_flag = self.ask_scale_option(scale_choice)
-        self.remove_outliers_flag = self.ask_remove_outliers_option(outlier_choice)
-        self.fill_methods = fill_methods or {}
+        self.scale_features_flag = self.ask_scale_option()
+        self.remove_outliers_flag = self.ask_remove_outliers_option()
 
-    def ask_scale_option(self, choice=None):
+    def ask_scale_option(self):
         """Ask the user if they want to scale the data or not."""
-        if choice:
-            return choice == '1'
         print(Fore.BLUE + "\nChoose an option for scaling features:\n" + Fore.RESET)
         print("1. Scale features")
         print("2. Do not scale features")
         choice = input(Fore.BLUE + "\nEnter your choice (1 or 2): " + Fore.RESET).strip()
         return choice == '1'
 
-    def ask_remove_outliers_option(self, choice=None):
+    def ask_remove_outliers_option(self):
         """Ask the user if they want to remove outliers or keep them."""
-        if choice:
-            return choice == '1'
         print(Fore.BLUE + "\nChoose an option for handling outliers:\n" + Fore.RESET)
         print("1. Remove outliers")
         print("2. Keep outliers")
@@ -66,40 +54,32 @@ class DataPreprocessor:
         return any(keyword in column.lower() for keyword in date_keywords)
 
     def handle_missing_values(self):
-        """Handle missing values based on user input or preset fill_methods."""
+        """Handle missing values based on user input."""
         for col in self.data.columns:
             if self.data[col].isnull().sum() > 0:
-                strategy = self.fill_methods.get(col)
-                if not strategy:
-                    # Interactive prompt only if no preset strategy
-                    print(Fore.BLUE + f"\nColumn '{col}' has missing values. Choose a fill method:\n" + Fore.RESET)
-                    print("1. Mean")
-                    print("2. Median")
-                    print("3. Mode")
-                    print("4. Specific Value")
-                    print("5. Skip")
-                    strategy = input(Fore.BLUE + "Enter your choice (1-5): " + Fore.RESET).strip()
-
-                if strategy == '1':
+                print(Fore.BLUE + f"\nColumn '{col}' has missing values. Choose a fill method:\n" + Fore.RESET)
+                print("1. Mean")
+                print("2. Median")
+                print("3. Mode")
+                print("4. Specific Value")
+                print("5. Skip")
+                
+                action = input(Fore.BLUE + "Enter your choice (1-5): " + Fore.RESET)
+                if action == '1':
                     self.data[col].fillna(self.data[col].mean(), inplace=True)
                     logging.info(Fore.GREEN + f"Filled missing values in '{col}' with mean." + Fore.RESET)
-                elif strategy == '2':
+                elif action == '2':
                     self.data[col].fillna(self.data[col].median(), inplace=True)
                     logging.info(Fore.GREEN + f"Filled missing values in '{col}' with median." + Fore.RESET)
-                elif strategy == '3':
+                elif action == '3':
                     self.data[col].fillna(self.data[col].mode()[0], inplace=True)
                     logging.info(Fore.GREEN + f"Filled missing values in '{col}' with mode." + Fore.RESET)
-                elif strategy == '4':
-                    if col in self.fill_methods:
-                        fill_value = self.fill_methods.get(f"{col}_value", None)
-                    else:
-                        fill_value = input(Fore.BLUE + "Enter the specific value to fill: " + Fore.RESET)
+                elif action == '4':
+                    fill_value = input(Fore.BLUE + "Enter the specific value to fill: " + Fore.RESET)
                     self.data[col].fillna(fill_value, inplace=True)
                     logging.info(Fore.GREEN + f"Filled missing values in '{col}' with specific value." + Fore.RESET)
-                elif strategy == '5':
+                elif action == '5':
                     logging.info(Fore.YELLOW + f"Skipping filling for column '{col}'." + Fore.RESET)
-                else:
-                    logging.warning(Fore.YELLOW + f"Invalid fill method for column '{col}', skipping." + Fore.RESET)
 
     def remove_outliers(self):
         """Remove outliers from numerical columns using the IQR method."""
