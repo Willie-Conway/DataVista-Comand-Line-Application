@@ -40,35 +40,26 @@ class DataVista:
         try:
             if target_column not in self.data.columns:
                 raise KeyError(f"Target column '{target_column}' not found in the dataset.")
-
-            # Encode binary categorical target if needed
+            # Validate and prepare target column for machine learning
             if self.data[target_column].dtype == 'object' or self.data[target_column].dtype.name == 'category':
                 if self.data[target_column].nunique() == 2:
-                    self.data[target_column] = self.data[target_column].astype('category').cat.codes
+                    self.data[target_column] = self.data[target_column].cat.codes
                 else:
                     raise ValueError("Logistic regression requires a binary target variable.")
 
             self.ml = MachineLearning(self.data)
-
-            # Regression case
             if self.data[target_column].dtype in ['float64', 'int64']:
                 if algorithm in ['Linear Regression', 'Decision Tree']:
-                    if algorithm == 'Linear Regression':
-                        self.ml.linear_regression(target_column)
-                    else:
-                        self.ml.decision_tree_regression(target_column)
+                    self.ml.linear_regression(target_column)
                 else:
                     logging.error(Fore.RED + "Invalid algorithm selected for regression." + Fore.RESET)
-            
-            # Classification case (binary)
-            elif self.data[target_column].nunique() == 2:
+            elif self.data[target_column].dtype in ['int64', 'float64'] and self.data[target_column].nunique() == 2:
                 if algorithm in ['Logistic Regression', 'Decision Tree']:
                     self.ml.classification(target_column, algorithm)
                 else:
                     logging.error(Fore.RED + "Invalid algorithm selected for classification." + Fore.RESET)
             else:
                 logging.error(Fore.RED + "Unsupported target column type or not binary." + Fore.RESET)
-
         except KeyError as e:
             logging.error(Fore.RED + str(e) + Fore.RESET)
         except Exception as e:
@@ -85,22 +76,20 @@ class DataVista:
         
         test_type = input(Fore.BLUE + "Enter the number corresponding to your choice: " + Fore.RESET)
 
-        tester = HypothesisTesting(self.data)
-
         if test_type == '1':
             print(Fore.GREEN + "\nT-Test Selected\n" + Fore.RESET)
-            column1 = input(Fore.BLUE + "Enter the first numeric column name for T-Test: " + Fore.RESET)
-            column2 = input(Fore.BLUE + "Enter the second numeric column name for T-Test: " + Fore.RESET)
-            alpha = input(Fore.BLUE + "Enter significance level (default 0.05): " + Fore.RESET)
-            alpha = float(alpha) if alpha else 0.05
+            column1 = input(Fore.BLUE + "\nEnter the first numeric column name for T-Test: " + Fore.RESET)
+            column2 = input(Fore.BLUE + "\nEnter the second numeric column name for T-Test: " + Fore.RESET)
+            alpha = float(input(Fore.BLUE + "\nEnter significance level (default 0.05): " + Fore.RESET) or 0.05)
+            tester = HypothesisTesting(self.data)
             tester.t_test(column1, column2, alpha)
 
         elif test_type == '2':
             print(Fore.GREEN + "\nChi-Squared Test Selected\n" + Fore.RESET)
-            column1 = input(Fore.BLUE + "Enter the first categorical column name for Chi-Squared Test: " + Fore.RESET)
-            column2 = input(Fore.BLUE + "Enter the second categorical column name for Chi-Squared Test: " + Fore.RESET)
-            alpha = input(Fore.BLUE + "Enter significance level (default 0.05): " + Fore.RESET)
-            alpha = float(alpha) if alpha else 0.05
+            column1 = input(Fore.BLUE + "\nEnter the first categorical column name for Chi-Squared Test: " + Fore.RESET)
+            column2 = input(Fore.BLUE + "\nEnter the second categorical column name for Chi-Squared Test: " + Fore.RESET)
+            alpha = float(input(Fore.BLUE + "\nEnter significance level (default 0.05): " + Fore.RESET) or 0.05)
+            tester = HypothesisTesting(self.data)
             tester.chi_squared_test(column1, column2, alpha)
 
         else:
@@ -139,8 +128,9 @@ def main():
             if choice == '1':
                 app.statistical_analysis()
             elif choice == '2':
-                target_column = input(Fore.BLUE + "Enter the target column name for machine learning: " + Fore.RESET)
+                target_column = input(Fore.BLUE + "\nEnter the target column name for machine learning: " + Fore.RESET)
                 
+                # Algorithm Selection Menu
                 print(Fore.BLUE + "\nChoose an algorithm:\n" + Fore.RESET)
                 algorithm_options = {
                     "1": "Linear Regression",
@@ -151,7 +141,7 @@ def main():
                 for key, value in algorithm_options.items():
                     print(f"{key}. {value}")
                     
-                algorithm_choice = input(Fore.BLUE + "Enter the number corresponding to your choice: " + Fore.RESET)
+                algorithm_choice = input(Fore.BLUE + "\nEnter the number corresponding to your choice: " + Fore.RESET)
                 
                 if algorithm_choice in algorithm_options:
                     algorithm = algorithm_options[algorithm_choice]
@@ -159,14 +149,16 @@ def main():
                 else:
                     logging.error(Fore.RED + "Invalid choice. Please select a valid algorithm." + Fore.RESET)
             elif choice == '3':
-                feature_columns = input(Fore.BLUE + "Enter feature column names to visualize (comma-separated): " + Fore.RESET).split(',')
+                feature_columns = input(Fore.BLUE + "\nEnter feature column names to visualize (comma-separated): " + Fore.RESET).split(',')
                 feature_columns = [col.strip() for col in feature_columns]
 
+                # Validate columns
                 valid_columns = [col for col in feature_columns if col in app.data.columns]
                 if not valid_columns:
                     logging.error(Fore.RED + "No valid columns provided. Please try again." + Fore.RESET)
                     continue
 
+                # Chart Type Selection
                 print(Fore.BLUE + "\nChoose a chart type:\n" + Fore.RESET)
                 chart_options = {
                     "1": "Histogram",
@@ -181,46 +173,43 @@ def main():
                 for key, value in chart_options.items():
                     print(f"{key}. {value}")
                     
-                chart_choice = input(Fore.BLUE + "Enter the chart type (1-8): " + Fore.RESET)
+                chart_choice = input(Fore.BLUE + "\nEnter the chart type (1-8): " + Fore.RESET)
                 app.visualize_data(valid_columns, chart_choice)
             elif choice == '4':
                 if app.ml is None or app.ml.model is None:
                     logging.error(Fore.RED + "No model trained to save." + Fore.RESET)
                 else:
-                    filename = input(Fore.BLUE + "Enter filename to save the model: " + Fore.RESET)
+                    filename = input(Fore.BLUE + "\nEnter filename to save the model: " + Fore.RESET)
                     app.ml.save_model(filename)
             elif choice == '5':
-                filename = input(Fore.BLUE + "Enter filename to load the model: " + Fore.RESET)
+                filename = input(Fore.BLUE + "\nEnter filename to load the model: " + Fore.RESET)
                 app.ml.load_model(filename)
             elif choice == '6':
-                if app.ml:
-                    app.ml.view_model()
-                else:
-                    logging.error(Fore.RED + "No model loaded." + Fore.RESET)
+                app.ml.view_model()
             elif choice == '7':
                 try:
-                    n_clusters = int(input(Fore.BLUE + "Enter the number of clusters for K-means: " + Fore.RESET))
+                    n_clusters = int(input(Fore.BLUE + "\nEnter the number of clusters for K-means: " + Fore.RESET))
                     clusters = app.ml.clustering(n_clusters)
                     print(Fore.GREEN + f"Clusters formed: {clusters}" + Fore.RESET)
-                except (ValueError, AttributeError):
-                    logging.error(Fore.RED + "Please enter a valid integer and ensure a model is loaded." + Fore.RESET)
+                except ValueError:
+                    logging.error(Fore.RED + "Please enter a valid integer for the number of clusters." + Fore.RESET)
             elif choice == '8':
-                target_column = input(Fore.BLUE + "Enter the target column for time series forecasting: " + Fore.RESET)
+                target_column = input(Fore.BLUE + "\nEnter the target column for time series forecasting: " + Fore.RESET)
                 order = input(Fore.BLUE + "Enter ARIMA order as three integers (p, d, q) separated by space: " + Fore.RESET).split()
                 try:
                     order = tuple(map(int, order))
                     forecast = app.ml.time_series(target_column, order)
                     print(Fore.GREEN + f"Forecast: {forecast}" + Fore.RESET)
-                except (ValueError, AttributeError):
-                    logging.error(Fore.RED + "Invalid ARIMA order format or model not loaded." + Fore.RESET)
+                except ValueError:
+                    logging.error(Fore.RED + "Invalid ARIMA order format. Please enter three integers." + Fore.RESET)
             elif choice == '9':
                 app.hypothesis_testing()
             elif choice == '10':
-                if input(Fore.YELLOW + "Are you sure you want to exit? (y/n): " + Fore.RESET).lower() == 'y':
+                if input(Fore.YELLOW + "\nAre you sure you want to exit? (y/n): " + Fore.RESET).lower() == 'y':
                     logging.info(Fore.BLUE + "Thanks for using " + Fore.WHITE + "DataVista" + "." + Fore.RESET + Fore.BLUE + " Goodbye!" + Fore.RESET)
                     break
             else:
-                logging.error(Fore.RED + "Invalid choice. Please enter a number between 1 and 10." + Fore.RESET)
+                logging.error(Fore.RED + "Invalid choice. Please enter a number between 1 and 10." + Fore.RED)
 
     except Exception as e:
         logging.error(Fore.RED + f"An error occurred: {str(e)}" + Fore.RESET)
