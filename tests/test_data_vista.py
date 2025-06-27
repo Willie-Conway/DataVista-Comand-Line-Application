@@ -37,7 +37,8 @@ class TestDataVista(unittest.TestCase):
         result = self.app.machine_learning(target_column, algorithm='linear_regression')
         self.assertIsNotNone(result)
 
-    def test_visualization(self):
+    @patch('builtins.input', side_effect=['n'])  # Mock input for axis naming prompt in visualization
+    def test_visualization(self, mock_input):
         # Assuming you have a column 'Store' to visualize
         column_to_visualize = ['Store']  # should be a list if your visualize_data expects list
         chart_type = '1'  # Histogram
@@ -57,6 +58,10 @@ class TestDataVista(unittest.TestCase):
         # Load the model (assuming method exists)
         loaded_model = self.app.ml.load_model('test_model.pkl')
         self.assertIsNotNone(loaded_model)
+
+        # Clean up saved model file
+        if os.path.exists('test_model.pkl'):
+            os.remove('test_model.pkl')
 
 
 if __name__ == '__main__':
