@@ -1,3 +1,4 @@
+[![CI](https://github.com/Willie-Conway/DataVista-Command-Line-Application/actions/workflows/ci.yml/badge.svg)](https://github.com/Willie-Conway/DataVista-Command-Line-Application/actions/workflows/ci.yml)
 # DataVista Command Line Application
 
 ![DataVista](https://github.com/Willie-Conway/DataVista-App/blob/62b22806b37009186f100531f50769ed98517397/assets/DataVista.png)
