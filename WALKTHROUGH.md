@@ -407,7 +407,7 @@ Enter your choice (1-14, or press Enter for default): 5
 ### Output
 Loads and displays  `Bar Chart` you selected.
 
-![Bar Chart](https://tinypic.host/images/2024/10/23/Diffferences-in-Market-Research-by-Category-1.png)
+![Bar Chart](https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/54a6b255bf372829fc99b5ba4544e4b3fa30623c/image/Bar%20Chart%20(2).png)
 
 ---
 
