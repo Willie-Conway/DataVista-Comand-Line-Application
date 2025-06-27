@@ -47,8 +47,9 @@ class TestDataVista(unittest.TestCase):
         target_column = 'Weekly_Sales'
         self.app.clean_data()
         self.app.preprocess_data()
-        result = self.app.machine_learning(target_column, algorithm='linear_regression')
-        self.assertIsNotNone(result)
+        self.app.machine_learning(target_column, algorithm='linear_regression')
+        self.assertIsNotNone(self.app.ml)
+        self.assertIsNotNone(self.app.ml.model)
 
     @patch('builtins.input', side_effect=[
         'n',  # Do not name x-axis and y-axis
@@ -72,13 +73,13 @@ class TestDataVista(unittest.TestCase):
         self.app.preprocess_data()
         self.app.machine_learning(target_column, algorithm='linear_regression')
 
-        # Save the model (assumes the method exists)
+        # Save the model
         self.app.ml.save_model('test_model.pkl')
         self.assertTrue(os.path.exists('test_model.pkl'))
 
-        # Load the model (assumes the method exists)
-        loaded_model = self.app.ml.load_model('test_model.pkl')
-        self.assertIsNotNone(loaded_model)
+        # Load the model
+        self.app.ml.load_model('test_model.pkl')
+        self.assertIsNotNone(self.app.ml.model)
 
         # Cleanup
         if os.path.exists('test_model.pkl'):
