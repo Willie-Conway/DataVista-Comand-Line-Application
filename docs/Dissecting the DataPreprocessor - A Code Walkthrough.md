@@ -1,4 +1,4 @@
-# Dissecting the DataPreprocessor: A Code Walkthrough
+# Dissecting the DataPreprocessor - A Code Walkthrough
 
 ## Table of Contents
 1. [Purpose of the File](#purpose-of-the-file)
