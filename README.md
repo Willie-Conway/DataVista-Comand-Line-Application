@@ -7,6 +7,22 @@
 
 **DataVista** is a Python application designed to assist data analysts and scientists in making informed decisions using existing data. The app integrates functionalities for 🔃data loading, 🧹cleaning, 🌀preprocessing, 🧮statistical analysis, 🦾machine learning, 🧪hypothesis testing and 📊visualization, making it a comprehensive ⚙️tool for data analysis.
 
+<p float="left">
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Choose%20to%20input%20missing%20values%20or%20skip.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Choose%20to%20scale%20features%20or%20skip%20scaling%20process.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Choosing%20the%20type%20of%20chart.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Completed%20Data%20Preprocessing.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/DataVisa%20Menu%20Options.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/DataVista%20in%20VSCode.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Detailed%20analysis%20for%20numeric%20column%20price.png" width="300" />
+</p>
+
+<p float="left">
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Performing%20Hypothesis%20Testing.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Performing%20a%20Statistical%20Analysis.png" width="300" />
+    <img src="https://github.com/Willie-Conway/DataVista-Command-Line-Application/blob/ef0a375a37548b7dc7f9d07ea1f64d88c075b225/image/Pie%20Chart.png" width="300" />
+</p>
+
 ## ☁️Why the name DataVista?
 
 The name `DataVista` reflects the application's mission to provide users with a clear and comprehensive view of their data. `Data` signifies the core focus of the application—working with datasets—while `Vista` suggests a broad perspective or insight. Together, the name conveys the idea of empowering users to explore, analyze, and understand their data more effectively, helping them make informed decisions based on meaningful insights.
