@@ -1,4 +1,4 @@
-# Dissecting the DataCleaner: A Code Walkthrough
+# Dissecting the DataCleaner - A Code Walkthrough
 
 ## Table of Contents
 1. [Purpose of the File](#purpose-of-the-file)
