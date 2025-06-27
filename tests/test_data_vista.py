@@ -1,8 +1,13 @@
 # test_data_vista.py
+import sys
 import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
 import unittest
 import pandas as pd
-from src.data_vista import DataVista
+# from src.data_vista import DataVista
+from data_vista import DataVista
+
 
 class TestDataVista(unittest.TestCase):
     def setUp(self):
