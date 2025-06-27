@@ -1,59 +1,63 @@
 # test_data_vista.py
 import sys
 import os
+from unittest.mock import patch
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
 
 import unittest
 import pandas as pd
-# from src.data_vista import DataVista
 from data_vista import DataVista
 
 
 class TestDataVista(unittest.TestCase):
     def setUp(self):
         self.app = DataVista()
-        self.app.load_data('data/test_data_with_duplicates.csv')  # Ensure you have the sample data available
+        self.app.load_data('data/test_data_with_duplicates.csv')  # Ensure this file exists for testing
 
     def test_load_data(self):
         self.assertIsNotNone(self.app.data)
         self.assertTrue(isinstance(self.app.data, pd.DataFrame))
 
-    def test_preprocess_data(self):
+    @patch('builtins.input', side_effect=['3'])  # Skip missing value handling or adjust as needed
+    def test_preprocess_data(self, mock_input):
         self.app.preprocess_data()
         self.assertFalse(self.app.data.isnull().values.any())
 
-    def test_clean_data(self):
+    @patch('builtins.input', side_effect=['3'])  # Skip cleaning input prompts
+    def test_clean_data(self, mock_input):
         original_shape = self.app.data.shape
         self.app.clean_data()
-        self.assertLess(self.app.data.shape[0], original_shape[0])  # Expecting some rows to be removed
+        self.assertLess(self.app.data.shape[0], original_shape[0])  # Expect rows removed after cleaning
 
-    def test_train_model(self):
-        # Assuming 'Weekly_Sales' is the target column in your sample data
+    @patch('builtins.input', side_effect=['3'])  # Skip inputs during clean and preprocess
+    def test_train_model(self, mock_input):
         target_column = 'Weekly_Sales'
         self.app.clean_data()
         self.app.preprocess_data()
-        result = self.app.machine_learning(target_column, algorithm='linear_regression')  # Update to include algorithm
+        result = self.app.machine_learning(target_column, algorithm='linear_regression')
         self.assertIsNotNone(result)
 
     def test_visualization(self):
         # Assuming you have a column 'Store' to visualize
-        column_to_visualize = 'Store'
+        column_to_visualize = ['Store']  # should be a list if your visualize_data expects list
         chart_type = '1'  # Histogram
         self.app.visualize_data(column_to_visualize, chart_type)
 
-    def test_save_load_model(self):
+    @patch('builtins.input', side_effect=['3'])  # Skip inputs during clean and preprocess
+    def test_save_load_model(self, mock_input):
         target_column = 'Weekly_Sales'
         self.app.clean_data()
         self.app.preprocess_data()
         self.app.machine_learning(target_column, algorithm='linear_regression')
-        
-        # Test saving the model
-        self.app.machine_learning.save_model('test_model.pkl')  # Ensure the save_model method is implemented
+
+        # Save the model (assuming method exists)
+        self.app.ml.save_model('test_model.pkl')
         self.assertTrue(os.path.exists('test_model.pkl'))
-        
-        # Test loading the model
-        loaded_model = self.app.machine_learning.load_model('test_model.pkl')  # Ensure the load_model method is implemented
+
+        # Load the model (assuming method exists)
+        loaded_model = self.app.ml.load_model('test_model.pkl')
         self.assertIsNotNone(loaded_model)
+
 
 if __name__ == '__main__':
     unittest.main()
